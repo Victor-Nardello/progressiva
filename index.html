@@ -166,6 +166,9 @@
             display: inline-block; background: var(--accent); color: white; padding: 12px 25px; border-radius: 50px;
             font-weight: bold; font-size: 1.1em; margin: 15px 5px; box-shadow: 0 5px 15px rgba(231,76,60,0.4); animation: pulse 2s infinite;
         }
+        .social-proof-badge {
+            background: var(--gold); color: var(--dark); padding: 8px 20px; border-radius: 25px; font-size: 1em; margin: 10px; display: inline-block;
+        }
 
         /* Seções */
         .section { padding: 80px 0; }
@@ -189,6 +192,19 @@
         .testimonial.active { opacity: 1; transform: translateX(0); }
         .stars { color: var(--gold); font-size: 1.5em; margin: 15px 0; }
         .testimonial-author { margin-top: 20px; font-weight: bold; color: var(--primary); font-size: 1.1em; }
+
+        /* Garantia */
+        .guarantee-section { background: linear-gradient(135deg, #e8f5e8, #d4edda); text-align: center; }
+        .guarantee-card { background: white; padding: 40px; border-radius: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .guarantee-badge { background: var(--gold); color: var(--dark); padding: 10px 25px; border-radius: 50px; font-size: 1.2em; font-weight: bold; display: inline-block; margin-bottom: 20px; animation: pulse 2s infinite; }
+
+        /* FAQs */
+        .faqs { background: #fff; }
+        .faq-item { background: white; margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .faq-question { background: var(--primary); color: white; padding: 20px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+        .faq-question:hover { background: #7d3c98; }
+        .faq-answer { padding: 20px; display: none; background: #f8f9fa; }
+        .faq-answer.active { display: block; }
 
         /* Escassez */
         .scarcity-banner {
@@ -226,10 +242,10 @@
         <div class="popup-content">
             <span class="popup-close" onclick="closePopup()">x</span>
             <h3>SÓ HOJE: ESTOQUE ACABANDO!</h3>
-            <p><strong>últimas unidades</strong> no estoque nacional!</p>
-            <p>Alisa <u>qualquer tipo de cabelo</u> sem danificar. Pague na entrega!</p>
+            <p><strong>últimas unidades</strong> no estoque nacional! 💖</p>
+            <p>Alisa <u>qualquer tipo de cabelo</u> sem danificar. Entrega relâmpago em 2-3 dias. Pague na entrega!</p>
             <a href="https://wa.me/5519982159610?text=QUERO%20a%20Progressiva%20Vegetal!" target="_blank" class="popup-cta">
-                QUERO MINHA UNIDADE AGORA!
+                TRANSFORME SEU CABELO AGORA! 🚀
             </a>
         </div>
     </div>
@@ -238,13 +254,14 @@
     <section class="hero">
         <div class="container">
             <h1 class="animate">Progressiva Vegetal Creme</h1>
-            <p class="animate animate-delay-1">A ÚNICA progressiva 100% vegetal que alisa, hidrata e brilha em UMA aplicação!</p>
+            <p class="animate animate-delay-1">A ÚNICA progressiva 100% vegetal que alisa, hidrata e brilha em UMA aplicação! 💖 Alisamento de até 3 meses – resultados de salão em casa!</p>
             <img src="https://drive.google.com/uc?export=view&id=1UOeQkII9GNaWY2e2KWh1REdxm6q-G1cU" 
                  alt="Progressiva Vegetal Creme" 
                  class="product-bottle animate animate-delay-2">
             <div class="animate animate-delay-2">
+                <span class="social-proof-badge">35.000+ Clientes Satisfeitos</span>
                 <span class="badge-urgency">APENAS 17 UNIDADES RESTAM!</span>
-                <span class="badge-urgency">PAGUE SÓ NA ENTREGA</span>
+                <span class="badge-urgency">PAGUE SÓ NA ENTREGA – Preço Imbatível!</span>
             </div>
         </div>
     </section>
@@ -257,23 +274,26 @@
                 <div class="benefit-card animate animate-delay-1">
                     <i class="fas fa-leaf"></i>
                     <h3>100% Natural</h3>
-                    <p>Sem formol, sem química agressiva. Só ingredientes vegetais premium.</p>
+                    <p>Sem formol, sem química agressiva. Fórmula com colágeno, argan, queratina e aminoácidos para hidratação intensa! 🌿</p>
                 </div>
                 <div class="benefit-card animate animate-delay-2">
                     <i class="fas fa-clock"></i>
                     <h3>Até 3 Meses de Liso</h3>
-                    <p>Resultado duradouro com apenas 1 aplicação. Economize tempo e dinheiro!</p>
+                    <p>Resultado duradouro com apenas 1 aplicação. 1 frasco rende até 10 aplicações – economize tempo e dinheiro! 💰</p>
                 </div>
                 <div class="benefit-card animate">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Garantia Total</h3>
-                    <p>Não gostou? Devolvemos seu dinheiro. Sem perguntas.</p>
+                    <p>Não gostou? Devolvemos seu dinheiro em 7 dias. Sem perguntas – risco zero! 🛡️</p>
                 </div>
                 <div class="benefit-card animate animate-delay-1">
                     <i class="fas fa-truck"></i>
-                    <h3>Entrega Express</h3>
-                    <p>Em até 3 dias úteis na sua casa. Pague só quando receber!</p>
+                    <h3>Entrega Relâmpago</h3>
+                    <p>Em até 2-3 dias úteis na sua casa. Chega antes do esperado! 🚀 Pague só quando receber.</p>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; font-size: 1.2em; color: var(--primary);">
+                <p><strong>Cabelos lisos, hidratados e sem frizz para todos os tipos: crespos, ondulados, loiros, pretos ou com química! ✨</strong></p>
             </div>
         </div>
     </section>
@@ -285,11 +305,11 @@
             <div style="background:white;padding:35px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);max-width:900px;margin:0 auto;text-align:left;font-size:1.1em;">
                 <p><strong>Tipo de cabelo:</strong> Lisos, ondulados, cacheados, crespos e até cabelos com química prévia</p>
                 <p><strong>Vantagens do produto:</strong> Alisa os fios sem danificar, reduz o frizz e deixa o cabelo hidratado, brilhoso e com aspecto natural</p>
-                <p><strong>Forma do produto:</strong> Creme, Loção</p>
+                <p><strong>Forma do produto:</strong> Creme, Loção – 500ml cada frasco</p>
                 <p><strong>Fabricante:</strong> Havana Cosmeticos</p>
                 <hr style="margin:20px 0;border:none;border-top:2px dashed #ddd;">
                 <p><strong>Sobre este item:</strong></p>
-                <p style="font-style:italic;margin-top:10px;">Perfeita para Todos os Tipos de Cabelo. Cacheado, ondulado ou com química? Não importa! A Progressiva Vegetal é compatível com todos os tipos de cabelo. Resultado garantido: fios alinhados, macios e saudáveis.</p>
+                <p style="font-style:italic;margin-top:10px;">Perfeita para Todos os Tipos de Cabelo. Cacheado, ondulado ou com química? Não importa! A Progressiva Vegetal é compatível com todos os tipos de cabelo. Resultado garantido: fios alinhados, macios e saudáveis. Livre de formol – sem cheiro forte! 😍</p>
             </div>
         </div>
     </section>
@@ -347,23 +367,80 @@
     <!-- Depoimentos -->
     <section class="section testimonials">
         <div class="container">
-            <h2 class="animate">Elas Já Transformaram Seus Cabelos</h2>
+            <h2 class="animate">Elas Já Transformaram Seus Cabelos – +35.000 Clientes Satisfeitos! 🔥</h2>
             <div class="testimonial-slider">
                 <div class="testimonial active">
-                    <p>"Nunca imaginei que uma progressiva natural daria esse resultado! Meu cabelo está liso, sedoso e com brilho de comercial. Chegou em 2 dias e paguei na entrega. Perfeito!"</p>
+                    <p>"O meu cabelo ficou muito bom eu amei 😍 🥰 😘 chegou rápindo super recomendo!"</p>
                     <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Fernanda Lima, 34 anos, SP</div>
+                    <div class="testimonial-author">- Maria Almeida</div>
                 </div>
                 <div class="testimonial">
-                    <p>"Comprei com medo, mas foi a MELHOR decisão! Sem cheiro forte, sem ardência. Meu cabelo cacheado virou liso escovado. Já recomendei pra todas as amigas!"</p>
+                    <p>"Simplesmente perfeita! 🤩 Meu cabelo ficou super liso, brilhoso e sem frizz. A entrega foi MUITO rápida, chegou antes do esperado! 🚀💖"</p>
                     <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Carla Santos, 28 anos, RJ</div>
+                    <div class="testimonial-author">- Jéssica Fernandes</div>
                 </div>
                 <div class="testimonial">
-                    <p>"Vegana e eficaz! Finalmente uma progressiva que cuida do meu cabelo e do planeta. Resultado incrível e preço justo. Comprei 2 de uma vez!"</p>
+                    <p>"Nunca mais fico sem! 😍 A progressiva alisou meu cabelo sem danificar e deixou um cheiro maravilhoso. Chegou em tempo recorde, recomendo demais! ⚡📦"</p>
                     <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Marina Costa, 31 anos, BH</div>
+                    <div class="testimonial-author">- Viviane Marcondes</div>
                 </div>
+                <div class="testimonial">
+                    <p>"Alisamento perfeito e sem cheiro forte! A progressiva é maravilhosa, e a entrega foi relâmpago! Muito satisfeita com a compra."</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-author">- Lurdes De Brito</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Entrega super rápida e produto incrível! 😱 Meu cabelo ficou desmaiado e com um brilho surreal. Chegou em 2 dias, superou minhas expectativas! 💃✨"</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-author">- Camila Franco</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Vale cada centavo! Meu cabelo ficou liso de salão, sem precisar de retoque. Além disso, a entrega foi a mais rápida que já vi! Amei!"</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-author">- Leisa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="section guarantee-section">
+        <div class="container">
+            <h2 class="animate">Garantia de Satisfação 100% – Seu Cabelo Perfeito ou Dinheiro de Volta! 🛡️</h2>
+            <div class="guarantee-card animate">
+                <div class="guarantee-badge">7 Dias para Testar Sem Risco</div>
+                <p style="font-size: 1.3em; margin: 20px 0;">Não gostou? Devolvemos 100% do seu dinheiro, sem burocracia. Milhares de mulheres já transformaram seus cabelos com confiança total. Garanta já o seu cabelo liso dos sonhos! 💖</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section faqs">
+        <div class="container">
+            <h2 class="animate">❓ Dúvidas sobre Nossa Progressiva? Confira Aqui! ❓</h2>
+            <div class="faq-item animate">
+                <div class="faq-question" onclick="toggleFAQ(this)">Danifica o cabelo? 😟</div>
+                <div class="faq-answer">Não! Nossa fórmula é livre de formol, com ativos hidratantes como colágeno e argan, deixando os cabelos sedosos, alinhados e profundamente hidratados. ✨</div>
+            </div>
+            <div class="faq-item animate animate-delay-1">
+                <div class="faq-question" onclick="toggleFAQ(this)">Qual o tempo de entrega? 🚀</div>
+                <div class="faq-answer">Super rápida! Todos os pedidos saem no mesmo dia ou próximo útil – chega em 2-3 dias, dependendo da região. Chegou antes do esperado para milhares de clientes! 📦</div>
+            </div>
+            <div class="faq-item animate animate-delay-2">
+                <div class="faq-question" onclick="toggleFAQ(this)">Funciona em todos os tipos de cabelo?</div>
+                <div class="faq-answer">Sim! Perfeita para lisos, ondulados, cacheados, crespos, loiros, pretos ou com química prévia. Liso perfeito sem frizz! 💇‍♀️</div>
+            </div>
+            <div class="faq-item animate">
+                <div class="faq-question" onclick="toggleFAQ(this)">Tem cheiro forte ou formol?</div>
+                <div class="faq-answer">Não! Fórmula 100% vegetal, sem formol ou cheiro forte. Só hidratação e brilho natural! 🌿</div>
+            </div>
+            <div class="faq-item animate animate-delay-1">
+                <div class="faq-question" onclick="toggleFAQ(this)">Quantas aplicações rende?</div>
+                <div class="faq-answer">Cada frasco de 500ml rende até 10 aplicações – economia total para um liso duradouro de até 3 meses! ⏳</div>
+            </div>
+            <div class="faq-item animate animate-delay-2">
+                <div class="faq-question" onclick="toggleFAQ(this)">E se não gostar?</div>
+                <div class="faq-answer">Garantia de 7 dias: devolva e receba 100% do dinheiro de volta. Sem perguntas! 😊</div>
             </div>
         </div>
     </section>
@@ -371,18 +448,20 @@
     <!-- Escassez -->
     <section class="scarcity-banner">
         <div class="container">
-            <h3>ÚLTIMA CHANCE HOJE!</h3>
+            <h3>ÚLTIMA CHANCE HOJE! 🔥</h3>
             <div class="countdown" id="countdown">09:24:17</div>
-            <p><strong>Últimas unidades restantes no estoque nacional!</strong></p>
-            <p>Mais de Milhares de mulheres já compraram esta semana. Não fique sem a sua!</p>
+            <p><strong>Últimas unidades restantes no estoque nacional! +35.000 mulheres já compraram esta semana.</strong></p>
+            <p>Entrega relâmpago em 2-3 dias. Preço imbatível – liso de salão por uma fração do custo! Não fique sem a sua!</p>
             <p style="margin-top: 20px; font-size: 1.3em;">Sem risco: pague só na entrega<br>Garantia de 07 dias<br>
+            <a href="https://wa.me/5519982159610?text=QUERO%20TRANSFORMAR%20MEU%20CABELO%20AGORA!" style="color: white; text-decoration: underline; font-weight: bold;">Alise seu cabelo agora e sinta a diferença! 💖</a>
+            </p>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <p>© 2025 Progressiva Vegetal Creme ® | CNPJ: 00.000.000/0001-00 | Todas as clientes reais • Resultados comprovados</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Confiança é tudo. Por isso, você só paga quando receber na sua mão.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Confiança é tudo. Por isso, você só paga quando receber na sua mão. Site seguro e entrega garantida! 🔒</p>
         </div>
     </footer>
 
@@ -398,7 +477,7 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.animate').forEach(el => { el.style.opacity = '0'; observer.observe(el); });
 
-        // Slider de depoimentos
+        // Slider de depoimentos (agora com 6)
         const testimonials = document.querySelectorAll('.testimonial');
         let current = 0;
         setInterval(() => {
@@ -435,7 +514,7 @@
             popup.classList.remove('show');
             popupShown = false;
             clearInterval(popupInterval);
-            popupInterval = setInterval(showPopup, 60000);
+            popupInterval = setInterval(showPopup, 30000);
         }
 
         popupInterval = setInterval(showPopup, 30000);
@@ -445,6 +524,12 @@
                 closePopup();
             }
         });
+
+        // FAQs Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            answer.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
