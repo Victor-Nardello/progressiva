@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progressiva Vegetal Creme – MEGA PROMOÇÃO DE FIM DE ANO 2025</title>
+    <title>MEGA PROMOÇÃO DE FIM DE ANO – Progressiva Vegetal Creme</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -11,8 +11,8 @@
             --red: #c41f2a;
             --green: #0d6e0d;
             --gold: #FFD700;
-            --white: #fff;
             --dark: #1a1a1a;
+            --light: #fff;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
@@ -20,22 +20,10 @@
             background: linear-gradient(135deg, #8B0000 0%, #000 100%);
             color: #fff;
             min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
         }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
 
-        /* Neve caindo */
-        .snow { 
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;
-            background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><circle cx="5" cy="5" r="2" fill="white" opacity="0.8"/></svg>') repeat;
-            background-size: 30px 30px;
-            animation: snow 20s linear infinite;
-        }
-        @keyframes snow { 0% { background-position: 0 0; } 100% { background-position: 0 1000px; } }
-
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10; }
-
-        /* Barra fixa de urgência */
+        /* Barra fixa */
         .top-bar {
             background: linear-gradient(90deg, #c41f2a, #e74c3c);
             color: white;
@@ -49,25 +37,21 @@
             box-shadow: 0 5px 20px rgba(196,31,42,0.6);
         }
         .top-bar span { color: #FFD700; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 
-        /* Hero natalino */
+        /* Hero */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1542751371-6532a7e7e44c?w=1400') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1542751371-6532a7e7e44c?w=1400') center/cover;
             text-align: center;
-            padding: 200px 20px 120px;
-            position: relative;
+            padding: 200px 20px 130px;
         }
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 5.5em;
             color: #FFD700;
             text-shadow: 0 0 20px #c41f2a;
-            animation: glow 3s infinite alternate;
         }
         .hero p { font-size: 1.9em; margin: 20px 0; }
-
-        @keyframes glow { from { text-shadow: 0 0 20px #c41f2a; } to { text-shadow: 0 0 40px #FFD700; } }
-        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 
         /* Cards de oferta */
         .offers-grid {
@@ -86,23 +70,22 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             text-align: center;
             transition: all 0.4s;
-            position: relative;
         }
         .offer-card:hover { transform: translateY(-20px); }
         .badge {
-            background: #c41f2a;
+            background: var(--red);
             color: white;
             padding: 15px;
             font-size: 1.3em;
             font-weight: bold;
         }
-        .best { border: 6px solid #FFD700; transform: scale(1.06); }
+        .best { border: 6px solid #FFD700; transform: scale(1.05); }
         .best .badge { background: linear-gradient(45deg, #c41f2a, #e74c3c); }
         .old-price { text-decoration: line-through; color: #999; font-size: 1.5em; margin: 15px 0; }
-        .new-price { font-size: 5.5em; font-weight: bold; color: #c41f2a; margin: 10px 0; }
-        .per-kit { font-size: 1.6em; color: #0d6e0d; font-weight: bold; }
+        .new-price { font-size: 5.5em; font-weight: bold; color: var(--red); margin: 10px 0; }
+        .per-kit { font-size: 1.6em; color: var(--green); font-weight: bold; }
         .countdown-box {
-            background: #c41f2a;
+            background: var(--red);
             color: white;
             padding: 15px 30px;
             border-radius: 50px;
@@ -144,7 +127,7 @@
 
         footer {
             background: #000;
-            color: #aaa;
+            color: #ccc;
             text-align: center;
             padding: 50px 20px;
             font-size: 1em;
@@ -153,11 +136,9 @@
 </head>
 <body>
 
-    <div class="snow"></div>
-
     <!-- Barra fixa -->
     <div class="top-bar">
-        MEGA PROMOÇÃO DE FIM DE ANO – ESTOQUE ACABANDO EM <span id="countdown-top">00:00:00</span>
+        MEGA PROMOÇÃO DE FIM DE ANO – TERMINA EM <span id="countdown-top">00d 00:00:00</span>
     </div>
 
     <!-- Hero -->
@@ -207,7 +188,7 @@
                 <h3 style="font-size:2.2em;">1 Progressiva Vegetal</h3>
                 <div class="old-price">De R$ 297,00</div>
                 <div class="new-price">R$ 150,00</div>
-                <p style="margin:25px 0;">Estoque acabando!</p>
+                <p style="margin:25px 0;">Estoque acabando rápido!</p>
                 <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20antes%20que%20acabe%20por%20R$%20150" class="btn-wa">
                     GARANTIR AGORA
                 </a>
@@ -222,7 +203,7 @@
                 <div class="old-price">De R$ 594,00</div>
                 <div class="new-price">R$ 300,00</div>
                 <div class="per-kit">R$ 150 cada – Economize R$ 294!</div>
-                <div class="countdown-box" id="countdown-main">ACABA EM 00:00:00</div>
+                <div class="countdown-box" id="countdown-main">ACABA EM 00d 00:00:00</div>
                 <a href="https://wa.me/5519982159610?text=QUERO%20OS%202%20KITS%20NA%20MEGA%20PROMO%20DE%20FIM%20DE%20ANO%20POR%20R$%20300" class="btn-wa">
                     LEVAR 2 KITS AGORA
                 </a>
@@ -256,7 +237,7 @@
     </footer>
 
     <script>
-        // Contador fixo até 31/12/2025 23:59:59 (não reseta com F5)
+        // Contador até 31/12/2025 23:59:59 (não reseta com F5)
         const deadline = new Date('2025-12-31T23:59:59').getTime();
 
         function updateCountdown() {
