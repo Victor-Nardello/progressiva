@@ -3,533 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progressiva Vegetal Creme - Últimas Unidades!</title>
+    <title>Progressiva Vegetal Creme – MEGA PROMOÇÃO DE FIM DE ANO 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         :root {
-            --primary: #8e44ad;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #f8f9fa;
-            --dark: #2c3e50;
-            --gold: #f1c40f;
-            --danger: #c0392b;
+            --red: #c41f2a;
+            --green: #0d6e0d;
+            --gold: #FFD700;
+            --white: #fff;
+            --dark: #1a1a1a;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to bottom, #fff, #f5f7fa);
-            color: var(--dark);
-            line-height: 1.7;
+            background: linear-gradient(135deg, #8B0000 0%, #000 100%);
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
             overflow-x: hidden;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Animações */
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
-        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        @keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
-        .animate { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
-        .animate-delay-1 { animation-delay: 0.2s; }
-        .animate-delay-2 { animation-delay: 0.4s; }
-        .pulse { animation: pulse 1.8s infinite; }
-        .float { animation: float 5s ease-in-out infinite; }
-        .shake { animation: shake 0.5s infinite; }
+        /* Neve caindo */
+        .snow { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;
+            background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><circle cx="5" cy="5" r="2" fill="white" opacity="0.8"/></svg>') repeat;
+            background-size: 30px 30px;
+            animation: snow 20s linear infinite;
+        }
+        @keyframes snow { 0% { background-position: 0 0; } 100% { background-position: 0 1000px; } }
 
-        /* WhatsApp Flutuante */
-        .whatsapp-float {
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10; }
+
+        /* Barra fixa de urgência */
+        .top-bar {
+            background: linear-gradient(90deg, #c41f2a, #e74c3c);
+            color: white;
+            text-align: center;
+            padding: 16px;
+            font-weight: bold;
+            font-size: 1.3em;
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            top: 0; left: 0; right: 0;
+            z-index: 9999;
+            box-shadow: 0 5px 20px rgba(196,31,42,0.6);
+        }
+        .top-bar span { color: #FFD700; animation: pulse 1.5s infinite; }
+
+        /* Hero natalino */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1542751371-6532a7e7e44c?w=1400') center/cover;
+            text-align: center;
+            padding: 200px 20px 120px;
+            position: relative;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5em;
+            color: #FFD700;
+            text-shadow: 0 0 20px #c41f2a;
+            animation: glow 3s infinite alternate;
+        }
+        .hero p { font-size: 1.9em; margin: 20px 0; }
+
+        @keyframes glow { from { text-shadow: 0 0 20px #c41f2a; } to { text-shadow: 0 0 40px #FFD700; } }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        /* Cards de oferta */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+            padding: 100px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .offer-card {
+            background: white;
+            color: #333;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+        }
+        .offer-card:hover { transform: translateY(-20px); }
+        .badge {
+            background: #c41f2a;
+            color: white;
+            padding: 15px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .best { border: 6px solid #FFD700; transform: scale(1.06); }
+        .best .badge { background: linear-gradient(45deg, #c41f2a, #e74c3c); }
+        .old-price { text-decoration: line-through; color: #999; font-size: 1.5em; margin: 15px 0; }
+        .new-price { font-size: 5.5em; font-weight: bold; color: #c41f2a; margin: 10px 0; }
+        .per-kit { font-size: 1.6em; color: #0d6e0d; font-weight: bold; }
+        .countdown-box {
+            background: #c41f2a;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 2em;
+            margin: 20px auto;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+        .btn-wa {
             background: #25d366;
             color: white;
-            width: 65px;
-            height: 65px;
+            padding: 22px 50px;
+            border-radius: 50px;
+            font-size: 1.9em;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 25px 0;
+            box-shadow: 0 15px 35px rgba(37,211,102,0.5);
+            transition: all 0.3s;
+        }
+        .btn-wa:hover { transform: scale(1.1); }
+
+        /* WhatsApp flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            background: #25d366;
+            width: 70px; height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2em;
-            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+            font-size: 2.5em;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.6);
             z-index: 1000;
-            cursor: pointer;
             animation: pulse 2s infinite;
-            transition: all 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.15); }
-        .whatsapp-float::after {
-            content: 'Fale comigo!';
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: var(--dark);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            white-space: nowrap;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .whatsapp-float:hover::after { opacity: 1; }
 
-        /* Pop-up Recorrente */
-        .recurrent-popup {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.88);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-        .recurrent-popup.show { opacity: 1; visibility: visible; }
-        .popup-content {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 28px;
+        footer {
+            background: #000;
+            color: #aaa;
             text-align: center;
-            max-width: 520px;
-            transform: scale(0.85);
-            transition: transform 0.4s ease;
-            box-shadow: 0 25px 70px rgba(0,0,0,0.35);
-            position: relative;
-        }
-        .recurrent-popup.show .popup-content { transform: scale(1); }
-        .popup-close {
-            position: absolute;
-            top: 15px; right: 20px;
-            font-size: 1.8em;
-            color: #999;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-        .popup-close:hover { color: var(--danger); }
-        .popup-content h3 {
-            font-size: 2.3em;
-            color: var(--danger);
-            margin-bottom: 18px;
-            line-height: 1.2;
-        }
-        .popup-content p { font-size: 1.28em; margin: 14px 0; color: #444; }
-        .popup-cta {
-            display: inline-block;
-            margin-top: 22px;
-            background: #25d366;
-            color: white;
-            padding: 16px 34px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.25em;
-            text-decoration: none;
-            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
-            transition: all 0.3s;
-        }
-        .popup-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(37,211,102,0.5); }
-
-        /* Hero */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 120px 20px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at center, rgba(142,68,173,0.3), transparent);
-            animation: float 6s ease-in-out infinite;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5em;
-            margin-bottom: 15px;
-            text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
-        }
-        .hero p { font-size: 1.5em; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .product-bottle { 
-            width: 340px; 
-            margin: 30px auto; 
-            animation: float 4s ease-in-out infinite; 
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-            border-radius: 15px;
-        }
-        .badge-urgency {
-            display: inline-block; background: var(--accent); color: white; padding: 12px 25px; border-radius: 50px;
-            font-weight: bold; font-size: 1.1em; margin: 15px 5px; box-shadow: 0 5px 15px rgba(231,76,60,0.4); animation: pulse 2s infinite;
-        }
-        .social-proof-badge {
-            background: var(--gold); color: var(--dark); padding: 8px 20px; border-radius: 25px; font-size: 1em; margin: 10px; display: inline-block;
-        }
-
-        /* Seções */
-        .section { padding: 80px 0; }
-        .section h2 { text-align: center; font-size: 3em; margin-bottom: 50px; color: var(--primary); position: relative; }
-        .section h2::after { content: ''; width: 80px; height: 4px; background: var(--gold); display: block; margin: 15px auto; border-radius: 2px; }
-
-        /* Benefícios */
-        .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .benefit-card { background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s; }
-        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-        .benefit-card i { font-size: 3em; color: var(--primary); margin-bottom: 20px; }
-
-        /* Vídeos */
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-top: 40px; }
-        .video-wrapper { position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
-
-        /* Depoimentos */
-        .testimonials { background: linear-gradient(135deg, #f5f7fa, #e4e9fd); }
-        .testimonial-slider { max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; }
-        .testimonial { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; font-style: italic; font-size: 1.2em; opacity: 0; transform: translateX(100%); transition: all 0.6s; }
-        .testimonial.active { opacity: 1; transform: translateX(0); }
-        .stars { color: var(--gold); font-size: 1.5em; margin: 15px 0; }
-        .testimonial-author { margin-top: 20px; font-weight: bold; color: var(--primary); font-size: 1.1em; }
-
-        /* Garantia */
-        .guarantee-section { background: linear-gradient(135deg, #e8f5e8, #d4edda); text-align: center; }
-        .guarantee-card { background: white; padding: 40px; border-radius: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .guarantee-badge { background: var(--gold); color: var(--dark); padding: 10px 25px; border-radius: 50px; font-size: 1.2em; font-weight: bold; display: inline-block; margin-bottom: 20px; animation: pulse 2s infinite; }
-
-        /* FAQs */
-        .faqs { background: #fff; }
-        .faq-item { background: white; margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .faq-question { background: var(--primary); color: white; padding: 20px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
-        .faq-question:hover { background: #7d3c98; }
-        .faq-answer { padding: 20px; display: none; background: #f8f9fa; }
-        .faq-answer.active { display: block; }
-
-        /* Escassez */
-        .scarcity-banner {
-            background: linear-gradient(45deg, var(--accent), #c0392b);
-            color: white; padding: 50px 20px; text-align: center; position: relative; overflow: hidden;
-        }
-        .scarcity-banner::before { content: 'Lightning'; position: absolute; font-size: 6em; opacity: 0.1; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: pulse 2s infinite; }
-        .countdown { font-size: 3em; font-weight: bold; margin: 20px 0; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
-        .scarcity-banner h3 { font-size: 2.5em; margin-bottom: 15px; }
-
-        /* Footer */
-        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; font-size: 0.9em; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8em; }
-            .hero p { font-size: 1.2em; }
-            .video-grid { grid-template-columns: 1fr; }
-            .countdown { font-size: 2em; }
-            .whatsapp-float { width: 55px; height: 55px; font-size: 1.8em; bottom: 15px; right: 15px; }
-            .popup-content { padding: 30px 20px; }
-            .popup-content h3 { font-size: 1.9em; }
-            .product-bottle { width: 280px; }
+            padding: 50px 20px;
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
 
-    <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5519982159610?text=Oi!%20Quero%20a%20Progressiva%20Vegetal%20Creme!" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="snow"></div>
 
-    <!-- Pop-up Recorrente a cada 30 segundos -->
-    <div class="recurrent-popup" id="recurrentPopup">
-        <div class="popup-content">
-            <span class="popup-close" onclick="closePopup()">x</span>
-            <h3>SÓ HOJE: ESTOQUE ACABANDO!</h3>
-            <p><strong>últimas unidades</strong> no estoque nacional! 💖</p>
-            <p>Alisa <u>qualquer tipo de cabelo</u> sem danificar. Entrega relâmpago em 2-3 dias. Pague na entrega!</p>
-            <a href="https://wa.me/5519982159610?text=QUERO%20a%20Progressiva%20Vegetal!" target="_blank" class="popup-cta">
-                TRANSFORME SEU CABELO AGORA! 🚀
-            </a>
-        </div>
+    <!-- Barra fixa -->
+    <div class="top-bar">
+        MEGA PROMOÇÃO DE FIM DE ANO – ESTOQUE ACABANDO EM <span id="countdown-top">00:00:00</span>
     </div>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1 class="animate">Progressiva Vegetal Creme</h1>
-            <p class="animate animate-delay-1">A ÚNICA progressiva 100% vegetal que alisa, hidrata e brilha em UMA aplicação! 💖 Alisamento de até 3 meses – resultados de salão em casa!</p>
-            <img src="https://drive.google.com/uc?export=view&id=1UOeQkII9GNaWY2e2KWh1REdxm6q-G1cU" 
-                 alt="Progressiva Vegetal Creme" 
-                 class="product-bottle animate animate-delay-2">
-            <div class="animate animate-delay-2">
-                <span class="social-proof-badge">35.000+ Clientes Satisfeitos</span>
-                <span class="badge-urgency">APENAS 17 UNIDADES RESTAM!</span>
-                <span class="badge-urgency">PAGUE SÓ NA ENTREGA – Preço Imbatível!</span>
-            </div>
+            <h1>MEGA PROMOÇÃO<br>DE FIM DE ANO 2025</h1>
+            <p>Última chance do ano para ter o cabelo dos sonhos em 2026!</p>
+            <p style="font-size:2.2em;margin-top:30px;">Escolha sua oferta especial abaixo</p>
         </div>
     </section>
 
-    <!-- Benefícios -->
-    <section class="section">
-        <div class="container">
-            <h2 class="animate">Por Que Milhares Escolhem?</h2>
-            <div class="benefits">
-                <div class="benefit-card animate animate-delay-1">
-                    <i class="fas fa-leaf"></i>
-                    <h3>100% Natural</h3>
-                    <p>Sem formol, sem química agressiva. Fórmula com colágeno, argan, queratina e aminoácidos para hidratação intensa! 🌿</p>
-                </div>
-                <div class="benefit-card animate animate-delay-2">
-                    <i class="fas fa-clock"></i>
-                    <h3>Até 3 Meses de Liso</h3>
-                    <p>Resultado duradouro com apenas 1 aplicação. 1 frasco rende até 10 aplicações – economize tempo e dinheiro! 💰</p>
-                </div>
-                <div class="benefit-card animate">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Garantia Total</h3>
-                    <p>Não gostou? Devolvemos seu dinheiro em 7 dias. Sem perguntas – risco zero! 🛡️</p>
-                </div>
-                <div class="benefit-card animate animate-delay-1">
-                    <i class="fas fa-truck"></i>
-                    <h3>Entrega Relâmpago</h3>
-                    <p>Em até 2-3 dias úteis na sua casa. Chega antes do esperado! 🚀 Pague só quando receber.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px; font-size: 1.2em; color: var(--primary);">
-                <p><strong>Cabelos lisos, hidratados e sem frizz para todos os tipos: crespos, ondulados, loiros, pretos ou com química! ✨</strong></p>
+    <!-- 5 CARDS DE OFERTA -->
+    <div class="offers-grid">
+
+        <!-- 1 KIT -->
+        <div class="offer-card">
+            <div class="badge">MAIS VENDIDA</div>
+            <div style="padding:40px 20px;">
+                <h3 style="font-size:2.2em;">1 Progressiva Vegetal</h3>
+                <div class="old-price">De R$ 297,00</div>
+                <div class="new-price">R$ 150,00</div>
+                <p style="margin:25px 0;">Perfeito para testar em casa</p>
+                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20na%20MEGA%20PROMO%20de%20Fim%20de%20Ano%20por%20R$%20150" class="btn-wa">
+                    QUERO 1 KIT
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Descrição Detalhada do Produto -->
-    <section class="section" style="background:#fff;">
-        <div class="container">
-            <h2 class="animate">Sobre a Progressiva Vegetal Creme</h2>
-            <div style="background:white;padding:35px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);max-width:900px;margin:0 auto;text-align:left;font-size:1.1em;">
-                <p><strong>Tipo de cabelo:</strong> Lisos, ondulados, cacheados, crespos e até cabelos com química prévia</p>
-                <p><strong>Vantagens do produto:</strong> Alisa os fios sem danificar, reduz o frizz e deixa o cabelo hidratado, brilhoso e com aspecto natural</p>
-                <p><strong>Forma do produto:</strong> Creme, Loção – 500ml cada frasco</p>
-                <p><strong>Fabricante:</strong> Havana Cosmeticos</p>
-                <hr style="margin:20px 0;border:none;border-top:2px dashed #ddd;">
-                <p><strong>Sobre este item:</strong></p>
-                <p style="font-style:italic;margin-top:10px;">Perfeita para Todos os Tipos de Cabelo. Cacheado, ondulado ou com química? Não importa! A Progressiva Vegetal é compatível com todos os tipos de cabelo. Resultado garantido: fios alinhados, macios e saudáveis. Livre de formol – sem cheiro forte! 😍</p>
+        <!-- 1 KIT -->
+        <div class="offer-card">
+            <div class="badge" style="background:#0d6e0d;">PRESENTE PERFEITO</div>
+            <div style="padding:40px 20px;">
+                <h3 style="font-size:2.2em;">1 Progressiva Vegetal</h3>
+                <div class="old-price">De R$ 347,00</div>
+                <div class="new-price">R$ 150,00</div>
+                <p style="margin:25px 0;">Ideal para presentear</p>
+                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20como%20presente%20de%20Natal%20por%20R$%20150" class="btn-wa">
+                    QUERO PRESENTEAR
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Vídeos -->
-    <section class="section">
-        <div class="container">
-            <h2 class="animate">Veja a Transformação Acontecer</h2>
-            <div class="video-grid">
-                <!-- VÍDEO 1: Aplicação -->
-                <div class="video-wrapper animate animate-delay-1">
-                    <iframe src="https://drive.google.com/file/d/1R-ZqPTLiyToiw9_ncQnwnTC_wXRUcf9g/preview" 
-                            width="100%" 
-                            height="315" 
-                            frameborder="0" 
-                            allow="autoplay; encrypted-media" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- VÍDEO 2: Depoimento -->
-                <div class="video-wrapper animate animate-delay-2">
-                    <iframe src="https://drive.google.com/file/d/1PvH78qMhDI6CPbhJIMBjAQP4h3fk21gf/preview" 
-                            width="100%" 
-                            height="315" 
-                            frameborder="0" 
-                            allow="autoplay; encrypted-media" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-
-                 <div class="video-wrapper animate animate-delay-2">
-                    <iframe src="https://drive.google.com/file/d/1pKmQ6ib7QNBia0etrtQ9zI37UfrEooQ-/preview" 
-                            width="100%" 
-                            height="315" 
-                            frameborder="0" 
-                            allow="autoplay; encrypted-media" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-
-                <div class="video-wrapper animate animate-delay-2">
-                    <iframe src="https://drive.google.com/file/d/1kIi8h63wpvNDaRI9YWBAQD66c4R0sUhM/preview" 
-                            width="100%" 
-                            height="315" 
-                            frameborder="0" 
-                            allow="autoplay; encrypted-media" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
+        <!-- 1 KIT -->
+        <div class="offer-card">
+            <div class="badge" style="background:#9f7aea;">ÚLTIMAS UNIDADES</div>
+            <div style="padding:40px 20px;">
+                <h3 style="font-size:2.2em;">1 Progressiva Vegetal</h3>
+                <div class="old-price">De R$ 297,00</div>
+                <div class="new-price">R$ 150,00</div>
+                <p style="margin:25px 0;">Estoque acabando!</p>
+                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20antes%20que%20acabe%20por%20R$%20150" class="btn-wa">
+                    GARANTIR AGORA
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Depoimentos -->
-    <section class="section testimonials">
-        <div class="container">
-            <h2 class="animate">Elas Já Transformaram Seus Cabelos – +35.000 Clientes Satisfeitos! 🔥</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <p>"O meu cabelo ficou muito bom eu amei 😍 🥰 😘 chegou rápindo super recomendo!"</p>
-                    <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Maria Almeida</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Simplesmente perfeita! 🤩 Meu cabelo ficou super liso, brilhoso e sem frizz. A entrega foi MUITO rápida, chegou antes do esperado! 🚀💖"</p>
-                    <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Jéssica Fernandes</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Nunca mais fico sem! 😍 A progressiva alisou meu cabelo sem danificar e deixou um cheiro maravilhoso. Chegou em tempo recorde, recomendo demais! ⚡📦"</p>
-                    <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Viviane Marcondes</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Alisamento perfeito e sem cheiro forte! A progressiva é maravilhosa, e a entrega foi relâmpago! Muito satisfeita com a compra."</p>
-                    <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Lurdes De Brito</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Entrega super rápida e produto incrível! 😱 Meu cabelo ficou desmaiado e com um brilho surreal. Chegou em 2 dias, superou minhas expectativas! 💃✨"</p>
-                    <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Camila Franco</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Vale cada centavo! Meu cabelo ficou liso de salão, sem precisar de retoque. Além disso, a entrega foi a mais rápida que já vi! Amei!"</p>
-                    <div class="stars">★★★★★</div>
-                    <div class="testimonial-author">- Leisa</div>
-                </div>
+        <!-- 2 KITS – MELHOR OFERTA -->
+        <div class="offer-card best">
+            <div class="badge">MELHOR OFERTA DO ANO</div>
+            <div style="padding:50px 20px;">
+                <h3 style="font-size:2.6em;">2 Progressivas Vegetal</h3>
+                <div class="old-price">De R$ 594,00</div>
+                <div class="new-price">R$ 300,00</div>
+                <div class="per-kit">R$ 150 cada – Economize R$ 294!</div>
+                <div class="countdown-box" id="countdown-main">ACABA EM 00:00:00</div>
+                <a href="https://wa.me/5519982159610?text=QUERO%20OS%202%20KITS%20NA%20MEGA%20PROMO%20DE%20FIM%20DE%20ANO%20POR%20R$%20300" class="btn-wa">
+                    LEVAR 2 KITS AGORA
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Garantia -->
-    <section class="section guarantee-section">
-        <div class="container">
-            <h2 class="animate">Garantia de Satisfação 100% – Seu Cabelo Perfeito ou Dinheiro de Volta! 🛡️</h2>
-            <div class="guarantee-card animate">
-                <div class="guarantee-badge">7 Dias para Testar Sem Risco</div>
-                <p style="font-size: 1.3em; margin: 20px 0;">Não gostou? Devolvemos 100% do seu dinheiro, sem burocracia. Milhares de mulheres já transformaram seus cabelos com confiança total. Garanta já o seu cabelo liso dos sonhos! 💖</p>
+        <!-- 2 KITS -->
+        <div class="offer-card">
+            <div class="badge" style="background:#2d3748;color:white;">LEVE MAIS, PAGUE MENOS</div>
+            <div style="padding:40px 20px;">
+                <h3 style="font-size:2.2em;">2 Progressivas Vegetal</h3>
+                <div class="old-price">De R$ 594,00</div>
+                <div class="new-price">R$ 300,00</div>
+                <div class="per-kit">Perfeito para o ano inteiro!</div>
+                <a href="https://wa.me/5519982159610?text=Quero%20os%202%20kits%20na%20promo%20de%20fim%20de%20ano%20por%20R$%20300" class="btn-wa">
+                    QUERO 2 KITS
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- FAQs -->
-    <section class="section faqs">
-        <div class="container">
-            <h2 class="animate">❓ Dúvidas sobre Nossa Progressiva? Confira Aqui! ❓</h2>
-            <div class="faq-item animate">
-                <div class="faq-question" onclick="toggleFAQ(this)">Danifica o cabelo? 😟</div>
-                <div class="faq-answer">Não! Nossa fórmula é livre de formol, com ativos hidratantes como colágeno e argan, deixando os cabelos sedosos, alinhados e profundamente hidratados. ✨</div>
-            </div>
-            <div class="faq-item animate animate-delay-1">
-                <div class="faq-question" onclick="toggleFAQ(this)">Qual o tempo de entrega? 🚀</div>
-                <div class="faq-answer">Super rápida! Todos os pedidos saem no mesmo dia ou próximo útil – chega em 2-3 dias, dependendo da região. Chegou antes do esperado para milhares de clientes! 📦</div>
-            </div>
-            <div class="faq-item animate animate-delay-2">
-                <div class="faq-question" onclick="toggleFAQ(this)">Funciona em todos os tipos de cabelo?</div>
-                <div class="faq-answer">Sim! Perfeita para lisos, ondulados, cacheados, crespos, loiros, pretos ou com química prévia. Liso perfeito sem frizz! 💇‍♀️</div>
-            </div>
-            <div class="faq-item animate">
-                <div class="faq-question" onclick="toggleFAQ(this)">Tem cheiro forte ou formol?</div>
-                <div class="faq-answer">Não! Fórmula 100% vegetal, sem formol ou cheiro forte. Só hidratação e brilho natural! 🌿</div>
-            </div>
-            <div class="faq-item animate animate-delay-1">
-                <div class="faq-question" onclick="toggleFAQ(this)">Quantas aplicações rende?</div>
-                <div class="faq-answer">Cada frasco de 500ml rende até 10 aplicações – economia total para um liso duradouro de até 3 meses! ⏳</div>
-            </div>
-            <div class="faq-item animate animate-delay-2">
-                <div class="faq-question" onclick="toggleFAQ(this)">E se não gostar?</div>
-                <div class="faq-answer">Garantia de 7 dias: devolva e receba 100% do dinheiro de volta. Sem perguntas! 😊</div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Escassez -->
-    <section class="scarcity-banner">
-        <div class="container">
-            <h3>ÚLTIMA CHANCE HOJE! 🔥</h3>
-            <div class="countdown" id="countdown">09:24:17</div>
-            <p><strong>Últimas unidades restantes no estoque nacional! +35.000 mulheres já compraram esta semana.</strong></p>
-            <p>Entrega relâmpago em 2-3 dias. Preço imbatível – liso de salão por uma fração do custo! Não fique sem a sua!</p>
-            <p style="margin-top: 20px; font-size: 1.3em;">Sem risco: pague só na entrega<br>Garantia de 07 dias<br>
-            <a href="https://wa.me/5519982159610?text=QUERO%20TRANSFORMAR%20MEU%20CABELO%20AGORA!" style="color: white; text-decoration: underline; font-weight: bold;">Alise seu cabelo agora e sinta a diferença! 💖</a>
-            </p>
-        </div>
-    </section>
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/5519982159610?text=QUERO%20A%20MEGA%20PROMO%20DE%20FIM%20DE%20ANO!" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <footer>
-        <div class="container">
-            <p>© 2025 Progressiva Vegetal Creme ® | CNPJ: 00.000.000/0001-00 | Todas as clientes reais • Resultados comprovados</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Confiança é tudo. Por isso, você só paga quando receber na sua mão. Site seguro e entrega garantida! 🔒</p>
-        </div>
+        <p>© 2025 Progressiva Vegetal Creme ® – MEGA PROMOÇÃO DE FIM DE ANO</p>
+        <p>Última chance de 2025 • Estoque extremamente limitado • Entrega garantida</p>
     </footer>
 
     <script>
-        // Animações ao rolar
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.animate').forEach(el => { el.style.opacity = '0'; observer.observe(el); });
+        // Contador fixo até 31/12/2025 23:59:59 (não reseta com F5)
+        const deadline = new Date('2025-12-31T23:59:59').getTime();
 
-        // Slider de depoimentos (agora com 6)
-        const testimonials = document.querySelectorAll('.testimonial');
-        let current = 0;
-        setInterval(() => {
-            testimonials[current].classList.remove('active');
-            current = (current + 1) % testimonials.length;
-            testimonials[current].classList.add('active');
-        }, 5000);
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = deadline - now;
 
-        // Countdown
-        let time = 9 * 60 * 60 + 24 * 60 + 17;
-        setInterval(() => {
-            if (time > 0) {
-                time--;
-                const h = Math.floor(time / 3600).toString().padStart(2, '0');
-                const m = Math.floor((time % 3600) / 60).toString().padStart(2, '0');
-                const s = (time % 60).toString().padStart(2, '0');
-                document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+            if (distance < 0) {
+                document.getElementById('countdown-top').innerText = "PROMO ENCERRADA";
+                document.getElementById('countdown-main').innerText = "ENCERRADA";
+                return;
             }
-        }, 1000);
 
-        // Pop-up recorrente a cada 30 segundos
-        const popup = document.getElementById('recurrentPopup');
-        let popupShown = false;
-        let popupInterval;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        function showPopup() {
-            if (!popupShown) {
-                popup.classList.add('show');
-                popupShown = true;
-            }
+            const timeStr = `${days}d ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+            document.getElementById('countdown-top').innerText = timeStr;
+            document.getElementById('countdown-main').innerText = `ACABA EM ${timeStr}`;
         }
 
-        function closePopup() {
-            popup.classList.remove('show');
-            popupShown = false;
-            clearInterval(popupInterval);
-            popupInterval = setInterval(showPopup, 60000);
-        }
-
-        popupInterval = setInterval(showPopup, 60000);
-
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup || e.target.classList.contains('popup-close')) {
-                closePopup();
-            }
-        });
-
-        // FAQs Toggle
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            answer.classList.toggle('active');
-        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
 </html>
