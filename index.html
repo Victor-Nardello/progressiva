@@ -19,11 +19,12 @@
             font-family: 'Montserrat', sans-serif;
             background: linear-gradient(135deg, #8B0000 0%, #000 100%);
             color: #fff;
-            min-height: 100vh;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
 
-        /* Barra fixa */
+        /* Barra fixa natalina */
         .top-bar {
             background: linear-gradient(90deg, #c41f2a, #e74c3c);
             color: white;
@@ -34,24 +35,24 @@
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 9999;
-            box-shadow: 0 5px 20px rgba(196,31,42,0.6);
+            box-shadow: 0 5px 20px rgba(196,31,42,.6);
         }
         .top-bar span { color: #FFD700; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 
         /* Hero */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1542751371-6532a7e7e44c?w=1400') center/cover;
+            background: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.9)), url('https://images.unsplash.com/photo-1542751371-6532a7e7e44c?w=1400') center/cover;
             text-align: center;
-            padding: 200px 20px 130px;
+            padding: 220px 20px 140px;
         }
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 5.5em;
+            font-size: 5.8em;
             color: #FFD700;
-            text-shadow: 0 0 20px #c41f2a;
+            text-shadow: 0 0 30px #c41f2a;
         }
-        .hero p { font-size: 1.9em; margin: 20px 0; }
+        .hero p { font-size: 2em; margin: 25px 0; }
 
         /* Cards de oferta */
         .offers-grid {
@@ -67,16 +68,16 @@
             color: #333;
             border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,.4);
             text-align: center;
-            transition: all 0.4s;
+            transition: .4s;
         }
         .offer-card:hover { transform: translateY(-20px); }
         .badge {
             background: var(--red);
             color: white;
-            padding: 15px;
-            font-size: 1.3em;
+            padding: 16px;
+            font-size: 1.35em;
             font-weight: bold;
         }
         .best { border: 6px solid #FFD700; transform: scale(1.05); }
@@ -87,7 +88,7 @@
         .countdown-box {
             background: var(--red);
             color: white;
-            padding: 15px 30px;
+            padding: 15px 35px;
             border-radius: 50px;
             font-size: 2em;
             margin: 20px auto;
@@ -104,8 +105,8 @@
             text-decoration: none;
             display: inline-block;
             margin: 25px 0;
-            box-shadow: 0 15px 35px rgba(37,211,102,0.5);
-            transition: all 0.3s;
+            box-shadow: 0 15px 35px rgba(37,211,102,.5);
+            transition: .3s;
         }
         .btn-wa:hover { transform: scale(1.1); }
 
@@ -119,18 +120,59 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5em;
-            box-shadow: 0 10px 30px rgba(37,211,102,0.6);
+            font-size: 2.6em;
+            box-shadow: 0 10px 30px rgba(37,211,102,.6);
             z-index: 1000;
             animation: pulse 2s infinite;
         }
 
-        footer {
-            background: #000;
-            color: #ccc;
-            text-align: center;
-            padding: 50px 20px;
-            font-size: 1em;
+        /* Seções originais (mantidas) */
+        .section { padding: 80px 0; }
+        .section h2 { text-align: center; font-size: 3em; margin-bottom: 50px; color: #FFD700; position: relative; }
+        .section h2::after { content: ''; width: 80px; height: 4px; background: #FFD700; display: block; margin: 15px auto; border-radius: 2px; }
+
+        .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .benefit-card { background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s; color: #333; }
+        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .benefit-card i { font-size: 3em; color: #c41f2a; margin-bottom: 20px; }
+
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-top: 40px; }
+        .video-wrapper { position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+
+        .testimonials { background: #111; padding: 100px 0; }
+        .carousel { display: flex; overflow-x: auto; gap: 30px; padding: 30px 0; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+        .carousel::-webkit-scrollbar { display: none; }
+        .testimonial-card { flex: 0 0 380px; background: white; color: #333; padding: 35px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,.3); scroll-snap-align: center; }
+        .testimonial-card p { font-size: 1.25em; font-style: italic; margin-bottom: 20px; line-height: 1.6; }
+        .stars { color: #FFD700; font-size: 1.8em; margin: 15px 0; }
+        .author { font-weight: bold; color: #c41f2a; font-size: 1.1em; }
+        .arrows { text-align: center; margin-top: 20px; }
+        .arrows i { font-size: 3em; color: #FFD700; cursor: pointer; margin: 0 30px; }
+
+        .guarantee-section { background: #0d6e0d; color: white; text-align: center; padding: 80px 20px; }
+        .guarantee-card { background: white; color: #333; padding: 40px; border-radius: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .guarantee-badge { background: #FFD700; color: #000; padding: 10px 25px; border-radius: 50px; font-size: 1.2em; font-weight: bold; display: inline-block; margin-bottom: 20px; animation: pulse 2s infinite; }
+
+        .faqs { background: #fff; padding: 80px 20px; }
+        .faq-item { background: white; margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .faq-question { background: #c41f2a; color: white; padding: 20px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+        .faq-question:hover { background: #b91c1c; }
+        .faq-answer { padding: 20px; display: none; background: #f8f9fa; color: #333; }
+        .faq-answer.active { display: block; }
+
+        .scarcity-banner {
+            background: linear-gradient(45deg, #c41f2a, #e74c3c);
+            color: white; padding: 80px 20px; text-align: center;
+        }
+        .countdown { font-size: 3.5em; font-weight: bold; margin: 20px 0; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
+
+        footer { background: #000; color: #ccc; text-align: center; padding: 60px 20px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.2em; }
+            .new-price { font-size: 3.8em; }
+            .btn-wa { font-size: 1.5em; padding: 18px 35px; }
+            .offers-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -146,28 +188,24 @@
         <div class="container">
             <h1>MEGA PROMOÇÃO<br>DE FIM DE ANO 2025</h1>
             <p>Última chance do ano para ter o cabelo dos sonhos em 2026!</p>
-            <p style="font-size:2.2em;margin-top:30px;">Escolha sua oferta especial abaixo</p>
+            <p style="font-size:2.3em;margin-top:40px;">Escolha sua oferta especial abaixo</p>
         </div>
     </section>
 
     <!-- 5 CARDS DE OFERTA -->
     <div class="offers-grid">
 
-        <!-- 1 KIT -->
         <div class="offer-card">
             <div class="badge">MAIS VENDIDA</div>
             <div style="padding:40px 20px;">
                 <h3 style="font-size:2.2em;">1 Progressiva Vegetal</h3>
                 <div class="old-price">De R$ 297,00</div>
                 <div class="new-price">R$ 150,00</div>
-                <p style="margin:25px 0;">Perfeito para testar em casa</p>
-                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20na%20MEGA%20PROMO%20de%20Fim%20de%20Ano%20por%20R$%20150" class="btn-wa">
-                    QUERO 1 KIT
-                </a>
+                <p style="margin:25px 0;">Perfeito para testar</p>
+                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20na%20MEGA%20PROMO%20de%20Fim%20de%20Ano%20por%20R$%20150" class="btn-wa">QUERO 1 KIT</a>
             </div>
         </div>
 
-        <!-- 1 KIT -->
         <div class="offer-card">
             <div class="badge" style="background:#0d6e0d;">PRESENTE PERFEITO</div>
             <div style="padding:40px 20px;">
@@ -175,27 +213,21 @@
                 <div class="old-price">De R$ 347,00</div>
                 <div class="new-price">R$ 150,00</div>
                 <p style="margin:25px 0;">Ideal para presentear</p>
-                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20como%20presente%20de%20Natal%20por%20R$%20150" class="btn-wa">
-                    QUERO PRESENTEAR
-                </a>
+                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20como%20presente%20de%20Natal%20por%20R$%20150" class="btn-wa">QUERO PRESENTEAR</a>
             </div>
         </div>
 
-        <!-- 1 KIT -->
         <div class="offer-card">
             <div class="badge" style="background:#9f7aea;">ÚLTIMAS UNIDADES</div>
             <div style="padding:40px 20px;">
                 <h3 style="font-size:2.2em;">1 Progressiva Vegetal</h3>
                 <div class="old-price">De R$ 297,00</div>
                 <div class="new-price">R$ 150,00</div>
-                <p style="margin:25px 0;">Estoque acabando rápido!</p>
-                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20antes%20que%20acabe%20por%20R$%20150" class="btn-wa">
-                    GARANTIR AGORA
-                </a>
+                <p style="margin:25px 0;">Estoque voando!</p>
+                <a href="https://wa.me/5519982159610?text=Quero%201%20kit%20antes%20que%20acabe%20por%20R$%20150" class="btn-wa">GARANTIR AGORA</a>
             </div>
         </div>
 
-        <!-- 2 KITS – MELHOR OFERTA -->
         <div class="offer-card best">
             <div class="badge">MELHOR OFERTA DO ANO</div>
             <div style="padding:50px 20px;">
@@ -204,23 +236,18 @@
                 <div class="new-price">R$ 300,00</div>
                 <div class="per-kit">R$ 150 cada – Economize R$ 294!</div>
                 <div class="countdown-box" id="countdown-main">ACABA EM 00d 00:00:00</div>
-                <a href="https://wa.me/5519982159610?text=QUERO%20OS%202%20KITS%20NA%20MEGA%20PROMO%20DE%20FIM%20DE%20ANO%20POR%20R$%20300" class="btn-wa">
-                    LEVAR 2 KITS AGORA
-                </a>
+                <a href="https://wa.me/5519982159610?text=QUERO%20OS%202%20KITS%20NA%20MEGA%20PROMO%20DE%20FIM%20DE%20ANO%20POR%20R$%20300" class="btn-wa">LEVAR 2 KITS AGORA</a>
             </div>
         </div>
 
-        <!-- 2 KITS -->
         <div class="offer-card">
             <div class="badge" style="background:#2d3748;color:white;">LEVE MAIS, PAGUE MENOS</div>
             <div style="padding:40px 20px;">
                 <h3 style="font-size:2.2em;">2 Progressivas Vegetal</h3>
                 <div class="old-price">De R$ 594,00</div>
                 <div class="new-price">R$ 300,00</div>
-                <div class="per-kit">Perfeito para o ano inteiro!</div>
-                <a href="https://wa.me/5519982159610?text=Quero%20os%202%20kits%20na%20promo%20de%20fim%20de%20ano%20por%20R$%20300" class="btn-wa">
-                    QUERO 2 KITS
-                </a>
+                <div class="per-kit">Liso o ano inteiro!</div>
+                <a href="https://wa.me/5519982159610?text=Quero%20os%202%20kits%20na%20promo%20de%20fim%20de%20ano%20por%20R$%20300" class="btn-wa">QUERO 2 KITS</a>
             </div>
         </div>
 
@@ -231,37 +258,207 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Benefícios (do seu HTML original) -->
+    <section class="section" style="background:#111;">
+        <div class="container">
+            <h2>Por Que Milhares Escolhem?</h2>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>100% Natural</h3>
+                    <p>Sem formol, sem química agressiva. Fórmula com colágeno, argan, queratina e aminoácidos para hidratação intensa!</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Até 3 Meses de Liso</h3>
+                    <p>Resultado duradouro com apenas 1 aplicação. 1 frasco rende até 10 aplicações – economize tempo e dinheiro!</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Garantia Total</h3>
+                    <p>Não gostou? Devolvemos seu dinheiro em 7 dias. Sem perguntas – risco zero!</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Entrega Relâmpago</h3>
+                    <p>Em até 2-3 dias úteis na sua casa. Chega antes do esperado! Pague só quando receber.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descrição do Produto -->
+    <section class="section" style="background:#fff;color:#333;">
+        <div class="container">
+            <h2>Sobre a Progressiva Vegetal Creme</h2>
+            <div style="background:white;padding:35px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);max-width:900px;margin:0 auto;text-align:left;font-size:1.1em;">
+                <p><strong>Tipo de cabelo:</strong> Lisos, ondulados, cacheados, crespos e até cabelos com química prévia</p>
+                <p><strong>Vantagens do produto:</strong> Alisa os fios sem danificar, reduz o frizz e deixa o cabelo hidratado, brilhoso e com aspecto natural</p>
+                <p><strong>Forma do produto:</strong> Creme, Loção – 500ml cada frasco</p>
+                <p><strong>Fabricante:</strong> Havana Cosmeticos</p>
+                <hr style="margin:20px 0;border:none;border-top:2px dashed #ddd;">
+                <p><strong>Sobre este item:</strong></p>
+                <p style="font-style:italic;margin-top:10px;">Perfeita para Todos os Tipos de Cabelo. Cacheado, ondulado ou com química? Não importa! A Progressiva Vegetal é compatível com todos os tipos de cabelo. Resultado garantido: fios alinhados, macios e saudáveis. Livre de formol – sem cheiro forte!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeos -->
+    <section class="section" style="background:#111;">
+        <div class="container">
+            <h2>Veja a Transformação Acontecer</h2>
+            <div class="video-grid">
+                <div class="video-wrapper">
+                    <iframe src="https://drive.google.com/file/d/1R-ZqPTLiyToiw9_ncQnwnTC_wXRUcf9g/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://drive.google.com/file/d/1PvH78qMhDI6CPbhJIMBjAQP4h3fk21gf/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://drive.google.com/file/d/1pKmQ6ib7QNBia0etrtQ9zI37UfrEooQ-/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://drive.google.com/file/d/1kIi8h63wpvNDaRI9YWBAQD66c4R0sUhM/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos em carrossel -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>+35.000 CLIENTES FELIZES DIZEM:</h2>
+            <div class="carousel" id="carousel">
+                <div class="testimonial-card">
+                    <p>"O meu cabelo ficou muito bom eu amei chegou rápido super recomendo!"</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="author">- Maria Almeida</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Simplesmente perfeita! Meu cabelo ficou super liso, brilhoso e sem frizz. Entrega MUITO rápida!"</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="author">- Jéssica Fernandes</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Nunca mais fico sem! A progressiva alisou meu cabelo sem danificar e deixou um cheiro maravilhoso."</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="author">- Viviane Marcondes</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Alisamento perfeito e sem cheiro forte! A progressiva é maravilhosa, entrega relâmpago!"</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="author">- Lurdes De Brito</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Entrega super rápida e produto incrível! Meu cabelo ficou desmaiado e com brilho surreal."</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="author">- Camila Franco</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Vale cada centavo! Cabelo liso de salão sem precisar de retoque. Melhor compra do ano!"</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="author">- Leisa</div>
+                </div>
+            </div>
+            <div class="arrows">
+                <i class="fas fa-chevron-left" onclick="scrollTestimonial(-1)"></i>
+                <i class="fas fa-chevron-right" onclick="scrollTestimonial(1)"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="guarantee-section">
+        <div class="container">
+            <h2>Garantia de Satisfação 100%</h2>
+            <div class="guarantee-card">
+                <div class="guarantee-badge">7 Dias para Testar Sem Risco</div>
+                <p style="font-size:1.3em;">Não gostou? Devolvemos 100% do seu dinheiro, sem burocracia. Milhares de mulheres já transformaram seus cabelos com confiança total.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faqs">
+        <div class="container">
+            <h2>Dúvidas? Confira Aqui!</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Danifica o cabelo?</div>
+                <div class="faq-answer">Não! Fórmula 100% vegetal, sem formol. Só hidratação e brilho natural!</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Qual o tempo de entrega?</div>
+                <div class="faq-answer">Super rápida! Chega em 2-3 dias. Pague só na entrega.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Funciona em todos os tipos de cabelo?</div>
+                <div class="faq-answer">Sim! Crespos, cacheados, loiros, com química... todos!</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Tem cheiro forte?</div>
+                <div class="faq-answer">Não! Fórmula suave, sem cheiro agressivo.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Quantas aplicações rende?</div>
+                <div class="faq-answer">Cada frasco rende até 10 aplicações!</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">E se não gostar?</div>
+                <div class="faq-answer">Garantia de 7 dias: devolução total do dinheiro.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Escassez final -->
+    <section class="scarcity-banner">
+        <div class="container">
+            <h3>ÚLTIMA CHANCE DO ANO!</h3>
+            <div class="countdown" id="countdown-bottom">ACABA EM 00d 00:00:00</div>
+            <p><strong>Estoque extremamente limitado!</strong></p>
+            <p>Sem risco: pague só na entrega • Garantia de 7 dias</p>
+            <a href="https://wa.me/5519982159610?text=QUERO%20A%20MEGA%20PROMO%20DE%20FIM%20DE%20ANO%20AGORA!" style="color:white;text-decoration:underline;font-weight:bold;">Alise seu cabelo antes que acabe!</a>
+        </div>
+    </section>
+
     <footer>
         <p>© 2025 Progressiva Vegetal Creme ® – MEGA PROMOÇÃO DE FIM DE ANO</p>
-        <p>Última chance de 2025 • Estoque extremamente limitado • Entrega garantida</p>
+        <p>Estoque limitado • Entrega garantida • Todas as clientes reais</p>
     </footer>
 
     <script>
-        // Contador até 31/12/2025 23:59:59 (não reseta com F5)
+        // Contador fixo até 31/12/2025 23:59:59
         const deadline = new Date('2025-12-31T23:59:59').getTime();
-
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = deadline - now;
-
             if (distance < 0) {
-                document.getElementById('countdown-top').innerText = "PROMO ENCERRADA";
-                document.getElementById('countdown-main').innerText = "ENCERRADA";
+                ['countdown-top','countdown-main','countdown-bottom'].forEach(id => {
+                    document.getElementById(id).innerText = "ENCERRADA";
+                });
                 return;
             }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            const timeStr = `${days}d ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
-            document.getElementById('countdown-top').innerText = timeStr;
-            document.getElementById('countdown-main').innerText = `ACABA EM ${timeStr}`;
+            const days = Math.floor(distance / (1000*60*60*24));
+            const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+            const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+            const seconds = Math.floor((distance % (1000*60)) / 1000);
+            const str = `${days}d ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+            document.getElementById('countdown-top').innerText = str;
+            document.getElementById('countdown-main').innerText = `ACABA EM ${str}`;
+            document.getElementById('countdown-bottom').innerText = `ACABA EM ${str}`;
         }
-
         setInterval(updateCountdown, 1000);
         updateCountdown();
+
+        // Carrossel de depoimentos
+        function scrollTestimonial(dir) {
+            const carousel = document.getElementById('carousel');
+            carousel.scrollBy({ left: dir * 410, behavior: 'smooth' });
+        }
+
+        // FAQ toggle
+        function toggleFAQ(el) {
+            el.nextElementSibling.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
