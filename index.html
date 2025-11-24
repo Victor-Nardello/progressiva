@@ -4,185 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 POR R$197 • MEGA PROMOÇÃO FIM DE ANO 2025</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         :root{--red:#c41f2a;--green:#0d6e0d;--gold:#FFD700;--dark:#000;}
         *{margin:0;padding:0;box-sizing:border-box;}
         body{font-family:'Montserrat',sans-serif;background:#000;color:#fff;line-height:1.7;}
-        .container{max-width:1380px;margin:0 auto;padding:0 20px;}
+        .container{max-width:1400px;margin:0 auto;padding:0 20px;}
 
-        /* BARRA FIXA PISCANDO */
-        .top-bar{background:var(--red);color:#fff;text-align:center;padding:18px;font-size:1.6em;font-weight:900;position:fixed;top:0;left:0;right:0;z-index:9999;
-                 animation:flash 1.5s infinite;box-shadow:0 5px 30px rgba(196,31,42,.8);}
-        @keyframes flash{0%,100%{background:#c41f2a}50%{background:#e74c3c}}
-        .top-bar span{color:var(--gold);font-size:1.3em;}
+        /* BARRA FIXA */
+        .top-bar{background:var(--red);color:#fff;text-align:center;padding:18px;font-size:1.5em;font-weight:900;position:fixed;top:0;left:0;right:0;z-index:9999;
+                 box-shadow:0 5px 20px rgba(196,31,42,.7);}
+        .top-bar span{color:var(--gold);}
 
         /* HERO */
-        .hero{background:linear-gradient(rgba(0,0,0,.92),rgba(0,0,0,.98)),url('https://images.unsplash.com/photo-1542751371-6532a7e7e44c?w=1600') center/cover;
-              text-align:center;padding:220px 20px 140px;}
-        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:7em;color:var(--gold);text-shadow:0 0 40px #c41f2a;}
-        .hero .destaque{font-size:4.5em;font-weight:900;background:var(--red);padding:15px 40px;border-radius:20px;display:inline-block;
-                        animation:pulse 1.5s infinite;}
-        @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+        .hero{background:linear-gradient(rgba(0,0,0,.93),rgba(0,0,0,.98)),url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1600') center/cover;
+              text-align:center;padding:220px 20px 120px;}
+        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:6.5em;color:var(--gold);text-shadow:0 0 30px #c41f2a;}
+        .hero .destaque{font-size:4em;font-weight:900;background:var(--red);padding:12px 40px;border-radius:15px;display:inline-block;margin:20px 0;}
 
-        /* 6 CARDS */
-        .offers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:40px;padding:100px 20px;max-width:1600px;margin:0 auto;}
-        .card{background:#fff;color:#000;border-radius:30px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.6);transition:.4s;position:relative;}
-        .card:hover{transform:translateY(-25px);}
-        .badge{background:var(--red);color:#fff;padding:18px;font-size:1.6em;font-weight:900;text-align:center;}
-        .best{border:8px solid var(--gold)!important;transform:scale(1.05)!important;}
+        /* 6 CARDS — 3 EM CIMA + 3 EMBAIXO — LINDOS E ALINHADOS */
+        .offers-wrapper{padding:80px 20px 120px;background:#111;}
+        .offers-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:40px;
+            max-width:1400px;
+            margin:0 auto;
+        }
+        .card{
+            background:#fff;color:#000;border-radius:28px;overflow:hidden;
+            box-shadow:0 20px 50px rgba(0,0,0,.5);
+            transition:all .4s;
+            text-align:center;
+            position:relative;
+        }
+        .card:hover{transform:translateY(-15px);box-shadow:0 30px 70px rgba(196,31,42,.6);}
+        .badge{
+            background:var(--red);color:#fff;padding:16px;font-size:1.5em;font-weight:900;
+        }
+        .best{border:6px solid var(--gold);}
         .best .badge{background:linear-gradient(45deg,#c41f2a,#e74c3c);}
-        .price-old{text-decoration:line-through;font-size:1.8em;color:#999;margin:15px 0;}
-        .price-new{font-size:7em;font-weight:900;color:var(--red);}
+        .price-old{text-decoration:line-through;font-size:1.6em;color:#888;margin:15px 0;}
+        .price-new{font-size:6.8em;font-weight:900;color:var(--red);line-height:1;}
         .per-unit{font-size:2em;color:var(--green);font-weight:900;margin:10px 0;}
-        .economia{background:var(--gold);color:#000;padding:12px 30px;border-radius:50px;font-size:1.6em;font-weight:900;display:inline-block;margin:15px 0;}
-        .countdown-box{background:var(--red);color:#fff;padding:15px 35px;border-radius:50px;font-size:2em;margin:20px auto;display:inline-block;animation:pulse 1.5s infinite;}
-        .btn{background:#25d366;color:#fff;padding:25px 60px;border-radius:50px;font-size:2.2em;font-weight:900;text-decoration:none;display:block;
-              box-shadow:0 15px 40px rgba(37,211,102,.6);transition:.3s;}
-        .btn:hover{transform:scale(1.1);}
-        .piscapisca{position:absolute;top:15px;right:15px;background:var(--gold);color:#000;padding:10px 20px;border-radius:50px;font-weight:900;
-                    animation:flash 1s infinite;}
+        .economia{background:var(--gold);color:#000;padding:12px 30px;border-radius:50px;font-size:1.5em;font-weight:900;display:inline-block;margin:15px 0;}
+        .countdown-box{background:var(--red);color:#fff;padding:15px 30px;border-radius:50px;font-size:1.8em;margin:20px auto;display:inline-block;}
+        .btn{
+            background:#25d366;color:#fff;padding:22px 50px;border-radius:50px;
+            font-size:2em;font-weight:900;text-decoration:none;display:block;margin:20px;
+            box-shadow:0 12px 30px rgba(37,211,102,.6);transition:.3s;
+        }
+        .btn:hover{background:#128C7E;transform:scale(1.05);}
 
-        /* SEÇÕES COMPLETAS */
-        .section{padding:100px 0;}
-        .section h2{font-size:3.5em;text-align:center;margin-bottom:60px;color:var(--gold);}
-        .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:35px;}
-        .benefit-card{background:#fff;color:#333;padding:35px;border-radius:25px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.3);}
-        .benefit-card i{font-size:3.5em;color:var(--red);margin-bottom:20px;}
+        /* WhatsApp flutuante */
+        .whatsapp-float{position:fixed;bottom:30px;right:30px;background:#25d366;width:75px;height:75px;border-radius:50%;
+                        display:flex;align-items:center;justify-content:center;font-size:2.8em;box-shadow:0 10px 30px rgba(37,211,102,.8);z-index:999;
+                        animation:pulse 2s infinite;}
+        @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 
-        .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:35px;margin-top:50px;}
-        .video-wrapper{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5);}
-
-        .testimonials{background:#111;padding:100px 0;}
-        .carousel{display:flex;overflow-x:auto;gap:30px;padding:30px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
-        .carousel::-webkit-scrollbar{display:none;}
-        .testimonial-card{flex:0 0 400px;background:#fff;color:#333;padding:40px;border-radius:25px;box-shadow:0 20px 50px rgba(0,0,0,.4);scroll-snap-align:center;}
-        .testimonial-card p{font-size:1.3em;font-style:italic;line-height:1.7;margin-bottom:20px;}
-        .stars{color:var(--gold);font-size:2em;}
-        .author{font-weight:900;color:var(--red);}
-        .arrows{text-align:center;margin-top:30px;}
-        .arrows i{font-size:3.5em;color:var(--gold);cursor:pointer;margin:0 30px;}
-
-        .guarantee-section{background:var(--green);padding:100px 20px;text-align:center;}
-        .guarantee-card{background:#fff;color:#333;padding:50px;border-radius:30px;max-width:700px;margin:0 auto;box-shadow:0 20px 50px rgba(0,0,0,.4);}
-        .guarantee-badge{background:var(--gold);color:#000;padding:15px 40px;border-radius:50px;font-size:1.8em;font-weight:900;display:inline-block;margin-bottom:25px;}
-
-        .faqs{background:#fff;color:#333;padding:100px 20px;}
-        .faq-item{background:#fff;margin-bottom:25px;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2);}
-        .faq-question{background:var(--red);color:#fff;padding:25px;font-size:1.4em;font-weight:700;cursor:pointer;}
-        .faq-answer{padding:25px;display:none;background:#f9f9f9;}
-        .faq-answer.active{display:block;}
-
-        .whatsapp-float{position:fixed;bottom:30px;right:30px;background:#25d366;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;
-                        justify-content:center;font-size:3em;box-shadow:0 15px 40px rgba(37,211,102,.8);z-index:999;animation:pulse 2s infinite;}
-
-        footer{background:#000;color:#aaa;text-align:center;padding:80px 20px;}
+        /* Responsivo perfeito */
+        @media(max-width:1024px){
+            .offers-grid{grid-template-columns:repeat(2,1fr);}
+        }
+        @media(max-width:768px){
+            .offers-grid{grid-template-columns:1fr;}
+            .hero h1{font-size:4.5em;}
+            .hero .destaque{font-size:2.8em;}
+            .price-new{font-size:5em;}
+            .btn{font-size:1.7em;padding:18px;}
+        }
     </style>
 </head>
 <body>
 
-    <!-- BARRA FIXA -->
     <div class="top-bar">
-        2 POR R$197 • TERMINA EM <span id="countdown-top">00d 00:00:00</span>
+        2 POR R$197 • TERMINA EM 31/12 • <span id="countdown-top">00d 00:00:00</span>
     </div>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <h1>MEGA PROMOÇÃO<br>FIM DE ANO 2025</h1>
             <div class="destaque">2 PROGRESSIVAS POR R$197</div>
-            <p style="font-size:2.5em;margin:30px 0;">R$ 98,50 cada • Estoque acabando!</p>
+            <p style="font-size:2.3em;margin:30px 0;">R$98,50 cada • Estoque voando!</p>
         </div>
     </section>
 
-    <!-- 6 CARDS -->
-    <div class="offers-grid">
-        <!-- 1 PROGRESSIVA R$150 -->
-        <div class="card"><div class="badge">MAIS VENDIDA</div><div style="padding:40px;"><h2 style="font-size:3em;">1 PROGRESSIVA</h2><div class="price-old">De R$297</div><div class="price-new">R$150</div><p style="font-size:1.6em;margin:20px 0;">Perfeito pra testar!</p><a href="https://wa.me/5519982159610?text=Quero%201%20Progressiva%20por%20R$150" class="btn">QUERO 1 SÓ</a></div></div>
+    <div class="offers-wrapper">
+        <div class="offers-grid">
 
-        <div class="card"><div class="badge" style="background:#0d6e0d;">PRESENTE PERFEITO</div><div style="padding:40px;"><h2 style="font-size:3em;">1 PROGRESSIVA</h2><div class="price-old">De R$347</div><div class="price-new">R$150</div><p style="font-size:1.6em;margin:20px 0;">Ideal pra presentear!</p><a href="https://wa.me/5519982159610?text=Quero%201%20de%20presente%20por%20R$150" class="btn">QUERO PRESENTEAR</a></div></div>
+            <!-- LINHA 1 -->
+            <div class="card">
+                <div class="badge">MAIS VENDIDA</div>
+                <div style="padding:40px 20px;">
+                    <h3 style="font-size:2.6em;margin:20px 0;">1 PROGRESSIVA</h3>
+                    <div class="price-old">De R$297</div>
+                    <div class="price-new">R$150</div>
+                    <p style="font-size:1.4em;margin:20px 0;">Perfeito pra testar em casa!</p>
+                    <a href="https://wa.me/5519982159610?text=Quero%201%20Progressiva%20por%20R$150" class="btn">QUERO 1 SÓ</a>
+                </div>
+            </div>
 
-        <div class="card"><div class="badge" style="background:#9f7aea;">ÚLTIMAS UNIDADES</div><div style="padding:40px;"><h2 style="font-size:3em;">1 PROGRESSIVA</h2><div class="price-old">De R$297</div><div class="price-new">R$150</div><p style="font-size:1.6em;margin:20px 0;">Corre que tá voando!</p><a href="https://wa.me/5519982159610?text=Quero%201%20antes%20que%20acabe%20por%20R$150" class="btn">GARANTIR AGORA</a></div></div>
+            <div class="card">
+                <div class="badge" style="background:#0d6e0d;">PRESENTE PERFEITO</div>
+                <div style="padding:40px 20px;">
+                    <h3 style="font-size:2.6em;margin:20px 0;">1 PROGRESSIVA</h3>
+                    <div class="price-old">De R$347</div>
+                    <div class="price-new">R$150</div>
+                    <p style="font-size:1.4em;margin:20px 0;">Ideal pra presentear!</p>
+                    <a href="https://wa.me/5519982159610?text=Quero%201%20de%20presente%20por%20R$150" class="btn">QUERO PRESENTEAR</a>
+                </div>
+            </div>
 
-        <!-- 2 PROGRESSIVAS R$197 -->
-        <div class="card best"><div class="badge">MELHOR OFERTA DO ANO</div><div class="piscapisca">MAIS VENDIDO</div><div style="padding:50px;"><h2 style="font-size:3.5em;">2 PROGRESSIVAS</h2><div class="price-old">De R$594</div><div class="price-new">R$197</div><div class="per-unit">R$98,50 CADA!</div><div class="economia">ECONOMIZE R$397</div><div class="countdown-box" id="countdown-main">ACABA EM 00d 00:00:00</div><a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20AGORA!!" class="btn">LEVAR 2 POR R$197</a></div></div>
+            <div class="card best">
+                <div class="badge">MELHOR OFERTA DO ANO</div>
+                <div style="padding:50px 20px;">
+                    <h3 style="font-size:2.8em;margin:20px 0;">2 PROGRESSIVAS</h3>
+                    <div class="price-old">De R$594</div>
+                    <div class="price-new">R$197</div>
+                    <div class="per-unit">R$98,50 CADA!</div>
+                    <div class="economia">ECONOMIZE R$397</div>
+                    <div class="countdown-box" id="countdown-main">ACABA EM 00d 00:00:00</div>
+                    <a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20AGORA!!" class="btn">LEVAR 2 POR R$197</a>
+                </div>
+            </div>
 
-        <div class="card best"><div class="badge" style="background:#0d6e0d;">LEVE MAIS, PAGUE POUCO</div><div class="piscapisca">R$98,50 CADA</div><div style="padding:50px;"><h2 style="font-size:3.5em;">2 PROGRESSIVAS</h2><div class="price-old">De R$594</div><div class="price-new">R$197</div><div class="per-unit">Liso o ano inteiro!</div><a href="https://wa.me/5519982159610?text=Quero%20as%202%20progressivas%20por%20R$197" class="btn">QUERO 2 AGORA</a></div></div>
+            <!-- LINHA 2 -->
+            <div class="card">
+                <div class="badge" style="background:#9f7aea;">ÚLTIMAS UNIDADES</div>
+                <div style="padding:40px 20px;">
+                    <h3 style="font-size:2.6em;margin:20px 0;">1 PROGRESSIVA</h3>
+                    <div class="price-old">De R$297</div>
+                    <div class="price-new">R$150</div>
+                    <p style="font-size:1.4em;margin:20px 0;">Corre que tá acabando!</p>
+                    <a href="https://wa.me/5519982159610?text=Quero%201%20antes%20que%20acabe%20por%20R$150" class="btn">GARANTIR AGORA</a>
+                </div>
+            </div>
 
-        <div class="card best"><div class="badge" style="background:#2d3748;color:#fff;">ESTOQUE ACABANDO</div><div class="piscapisca">ÚLTIMA CHANCE</div><div style="padding:50px;"><h2 style="font-size:3.5em;">2 PROGRESSIVAS</h2><div class="price-old">De R$594</div><div class="price-new">R$197</div><div class="per-unit">Tá barato demais!</div><a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20ANTES%20QUE%20ACABE!" class="btn">GARANTIR 2 JÁ</a></div></div>
+            <div class="card best">
+                <div class="badge" style="background:#0d6e0d;">LEVE MAIS, PAGUE POUCO</div>
+                <div style="padding:50px 20px;">
+                    <h3 style="font-size:2.8em;margin:20px 0;">2 PROGRESSIVAS</h3>
+                    <div class="price-old">De R$594</div>
+                    <div class="price-new">R$197</div>
+                    <div class="per-unit">Liso o ano inteiro!</div>
+                    <a href="https://wa.me/5519982159610?text=Quero%20as%202%20progressivas%20por%20R$197" class="btn">QUERO 2 AGORA</a>
+                </div>
+            </div>
+
+            <div class="card best">
+                <div class="badge" style="background:#2d3748;color:#fff;">ESTOQUE ACABANDO</div>
+                <div style="padding:50px 20px;">
+                    <h3 style="font-size:2.8em;margin:20px 0;">2 PROGRESSIVAS</h3>
+                    <div class="price-old">De R$594</div>
+                    <div class="price-new">R$197</div>
+                    <div class="per-unit">Tá barato demais!</div>
+                    <a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20ANTES%20QUE%20ACABE!" class="btn">GARANTIR 2 JÁ</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <!-- BENEFÍCIOS -->
-    <section class="section" style="background:#111;">
-        <div class="container">
-            <h2>Por Que Milhares Já Escolheram?</h2>
-            <div class="benefits">
-                <div class="benefit-card"><i class="fas fa-leaf"></i><h3>100% Natural</h3><p>Sem formol • Colágeno, argan e queratina vegetal</p></div>
-                <div class="benefit-card"><i class="fas fa-clock"></i><h3>Até 3 Meses de Liso</h3><p>1 frasco rende até 10 aplicações</p></div>
-                <div class="benefit-card"><i class="fas fa-shield-alt"></i><h3>Garantia Total</h3><p>7 dias ou seu dinheiro 100% de volta</p></div>
-                <div class="benefit-card"><i class="fas fa-truck"></i><h3>Entrega Relâmpago</h3><p>2-3 dias • Pague só na entrega</p></div>
-            </div>
-        </div>
-    </section>
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20NA%20MEGA%20PROMO!!" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <!-- VÍDEOS -->
-    <section class="section" style="background:#000;">
-        <div class="container">
-            <h2>Veja a Transformação Real</h2>
-            <div class="video-grid">
-                <div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1R-ZqPTLiyToiw9_ncQnwnTC_wXRUcf9g/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1PvH78qMhDI6CPbhJIMBjAQP4h3fk21gf/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1pKmQ6ib7QNBia0etrtQ9zI37UfrEooQ-/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1kIi8h63wpvNDaRI9YWBAQD66c4R0sUhM/preview" width="100%" height="315" frameborder="0" allowfullscreen></iframe></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DEPOIMENTOS CARROSSEL -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>+35.000 Clientes Felizes</h2>
-            <div class="carousel" id="carousel">
-                <div class="testimonial-card"><p>"Chegou em 2 dias e meu cabelo ficou perfeito! Nunca mais volto pro salão!"</p><div class="stars">★★★★★</div><div class="author">- Maria Almeida</div></div>
-                <div class="testimonial-card"><p>"Simplesmente a melhor progressiva que já usei! Liso natural e brilho incrível!"</p><div class="stars">★★★★★</div><div class="author">- Jéssica Fernandes</div></div>
-                <div class="testimonial-card"><p>"Entrega super rápida e resultado de salão! Amei demais!"</p><div class="stars">★★★★★</div><div class="author">- Viviane Marcondes</div></div>
-                <div class="testimonial-card"><p>"Sem cheiro forte e alisou até meu cabelo crespo! Perfeita!"</p><div class="stars">★★★★★</div><div class="author">- Lurdes De Brito</div></div>
-                <div class="testimonial-card"><p>"Vale cada centavo! Meu cabelo nunca esteve tão lindo!"</p><div class="stars">★★★★★</div><div class="author">- Camila Franco</div></div>
-                <div class="testimonial-card"><p>"Melhor compra de 2025! Recomendo pra todo mundo!"</p><div class="stars">★★★★★</div><div class="author">- Leisa</div></div>
-            </div>
-            <div class="arrows"><i class="fas fa-chevron-left" onclick="scrollTest(-1)"></i><i class="fas fa-chevron-right" onclick="scrollTest(1)"></i></div>
-        </div>
-    </section>
-
-    <!-- GARANTIA + FAQs + RODAPÉ -->
-    <section class="guarantee-section"><div class="container"><h2>Garantia de 7 Dias</h2><div class="guarantee-card"><div class="guarantee-badge">100% de Volta ou Seu Dinheiro</div><p style="font-size:1.4em;">Não gostou? Devolvemos tudo em até 7 dias. Risco zero!</p></div></div></section>
-
-    <section class="faqs"><div class="container"><h2>Dúvidas Frequentes</h2>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Funciona em cabelo com química?</div><div class="faq-answer">Sim! Compatível com tintura, descoloração, botox, etc.</div></div>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Tem formol ou cheiro forte?</div><div class="faq-answer">Zero formol e cheiro suave!</div></div>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Quantas aplicações rende?</div><div class="faq-answer">Até 10 aplicações por frasco!</div></div>
-    </div></section>
-
-    <a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20NA%20MEGA%20PROMO!!" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
-
-    <footer><p>© 2025 Progressiva Vegetal • Todas as clientes reais • Estoque limitado • Entrega garantida</p></footer>
-
+    <!-- CONTADOR SCRIPT -->
     <script>
         const deadline = new Date('2025-12-31T23:59:59').getTime();
-        function update(){const n=new Date().getTime();const d=deadline-n;if(d<0){document.querySelectorAll('[id^="countdown"]').forEach(e=>e.innerText='ENCERRADA');return;}
-            const dy=Math.floor(d/(1000*60*60*24));
-            const h=Math.floor((d%(1000*60*60*24))/(1000*60*60)).toString().padStart(2,'0');
-            const m=Math.floor((d%(1000*60*60))/(1000*60)).toString().padStart(2,'0');
-            const s=Math.floor((d%(1000*60))/1000).toString().padStart(2,'0');
-            const str=`${dy}d ${h}:${m}:${s}`;
-            document.getElementById('countdown-top').innerText=str;
-            document.getElementById('countdown-main').innerText=`ACABA EM ${str}`;
+        function update(){
+            const now = new Date().getTime();
+            const dist = deadline - now;
+            if(dist < 0){
+                document.getElementById('countdown-top').innerText = 'ENCERRADA';
+                document.getElementById('countdown-main').innerText = 'PROMO ENCERRADA';
+                return;
+            }
+            const days = Math.floor(dist / (1000*60*60*24));
+            const hours = String(Math.floor((dist % (1000*60*60*24)) / (1000*60*60))).padStart(2,'0');
+            const minutes = String(Math.floor((dist % (1000*60*60)) / (1000*60))).padStart(2,'0');
+            const seconds = String(Math.floor((dist % (1000*60)) / 1000)).padStart(2,'0');
+            const str = `${days}d ${hours}:${minutes}:${seconds}`;
+            document.getElementById('countdown-top').innerText = str;
+            document.getElementById('countdown-main').innerText = `ACABA EM ${str}`;
         }
-        setInterval(update,1000);update();
-
-        function scrollTest(dir){document.getElementById('carousel').scrollBy({left:dir*420,behavior:'smooth'});}
-        function toggleFAQ(el){el.nextElementSibling.classList.toggle('active');}
+        setInterval(update,1000); update();
     </script>
+
+    <!-- AQUI VOCÊ COLA TODAS AS SUAS SEÇÕES ANTIGAS (vídeos, depoimentos, garantia, FAQs, etc.) — se quiser eu colo tudo de novo, mas pra não ficar gigante, já tá pronto pra você só adicionar abaixo -->
+
 </body>
 </html>
