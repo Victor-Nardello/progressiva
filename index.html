@@ -3,177 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 POR R$197 • MEGA PROMOÇÃO FIM DE ANO 2025</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Progressiva Vegetal Havana • 2 por R$197 • Promoção Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        :root{--red:#c41f2a;--green:#0d6e0d;--gold:#FFD700;--dark:#000;}
+        :root{
+            --gold: #D4AF37;
+            --dark: #0F0F0F;
+            --gray: #1A1A1A;
+            --light: #F8F8F8;
+            --red: #9B1D25;
+            --green: #0d6e0d;
+        }
         *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:'Montserrat',sans-serif;background:#000;color:#fff;line-height:1.7;}
-        .container{max-width:1500px;margin:0 auto;padding:0 20px;}
+        body{font-family:'Inter',sans-serif;background:var(--dark);color:#fff;line-height:1.7;}
+        .container{max-width:1300px;margin:0 auto;padding:0 20px;}
 
-        /* BARRA FIXA */
-        .top-bar{background:var(--red);color:#fff;text-align:center;padding:18px;font-size:1.6em;font-weight:900;position:fixed;top:0;left:0;right:0;z-index:9999;
-                 box-shadow:0 5px 25px rgba(196,31,42,.8);}
-        .top-bar span{color:var(--gold);animation:pulse 1.5s infinite;}
-        @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+        /* TOP BAR */
+        .top-bar{
+            background:linear-gradient(135deg,#1a1a1a,#000);
+            color:#fff;text-align:center;padding:14px;font-size:1.1em;font-weight:600;
+            position:fixed;top:0;left:0;right:0;z-index:999;border-bottom:1px solid #333;
+        }
+        .top-bar span{color:var(--gold);font-weight:800;}
 
-        /* HERO */
-        .hero{background:linear-gradient(rgba(0,0,0,.94),rgba(0,0,0,.98)),url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1600') center/cover;
-              text-align:center;padding:200px 20px 100px;}
-        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:7em;color:var(--gold);text-shadow:0 0 40px #c41f2a;}
-        .hero .destaque{font-size:4.5em;font-weight:900;background:var(--red);padding:15px 50px;border-radius:20px;display:inline-block;margin:25px 0;}
+        /* HERO ELEGANTE */
+        .hero{
+            background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1800') center/cover no-repeat;
+            text-align:center;padding:220px 20px 140px;
+        }
+        .hero h1{font-family:'Playfair Display',serif;font-size:5.5rem;color:#fff;margin-bottom:20px;}
+        .hero .subtitle{font-size:2.2rem;color:var(--gold);margin:20px 0;}
+        .hero .highlight{font-size:4.5rem;font-weight:900;background:var(--red);padding:12px 60px;border-radius:50px;display:inline-block;margin:30px 0;box-shadow:0 10px 40px rgba(155,29,37,0.5);}
+        .anvisa-badge{background:#fff;color:#000;padding:12px 40px;border-radius:50px;font-weight:800;font-size:1.2rem;margin-top:25px;display:inline-block;}
+
+        /* SEÇÃO DE CONFIANÇA */
+        .trust-section{background:var(--gray);padding:100px 20px;text-align:center;}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;max-width:1100px;margin:0 auto;}
+        .stat-box{background:rgba(255,255,255,0.05);padding:40px;border-radius:20px;border:2px solid rgba(212,175,55,0.2);}
+        .stat-box h3{font-size:4.5rem;color:var(--gold);margin:0;}
+        .stat-box p{font-size:1.4rem;margin-top:10px;}
+        .safety-box{background:var(--red);max-width:1000px;margin:80px auto;padding:50px;border-radius:25px;}
+        .safety-box ul{text-align:left;font-size:1.35rem;line-height:2.2;max-width:700px;margin:0 auto;}
+        .badges{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:50px;}
+        .badges span{background:var(--green);color:#fff;padding:14px 35px;border-radius:50px;font-weight:700;font-size:1.25rem;}
 
         /* CARDS */
-        .offers-wrapper{padding:80px 20px;background:#111;}
-        .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;max-width:1600px;margin:0 auto;}
-        .offer-card{
-            background:linear-gradient(135deg,#1a1a1a,#000);
-            color:#fff;border-radius:35px;overflow:hidden;
-            box-shadow:0 20px 50px rgba(0,0,0,.8);transition:all .4s;text-align:center;
-            border:4px solid transparent;height:800px;display:flex;flex-direction:column;justify-content:space-between;
-        }
-        .offer-card:hover{transform:translateY(-15px);}
-        .offer-card.best{border:6px solid var(--gold);background:linear-gradient(135deg,#1e0d0d,#000);transform:scale(1.07);}
-        .badge{background:var(--red);color:#fff;padding:20px 0;font-size:1.8em;font-weight:900;
-               clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);}
+        .offers-wrapper{padding:120px 20px;background:#000;}
+        .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1400px;margin:0 auto;}
+        .offer-card{background:linear-gradient(135deg,#1a1a1a,#000);color:#fff;border-radius:30px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.6);transition:all .4s;text-align:center;border:3px solid transparent;height:800px;display:flex;flex-direction:column;justify-content:space-between;}
+        .offer-card:hover{transform:translateY(-12px);}
+        .offer-card.best{border:5px solid var(--gold);background:linear-gradient(135deg,#1e0d0d,#000);transform:scale(1.05);}
+        .badge{background:var(--red);color:#fff;padding:22px 0;font-size:1.8em;font-weight:900;}
         .offer-card.best .badge{background:linear-gradient(45deg,#c41f2a,#e74c3c);}
-        .card-body{padding:30px 20px 40px;}
-        .offer-card h3{font-size:2.8em;margin:10px 0;}
-        .price-old{font-size:1.6em;text-decoration:line-through;opacity:0.7;}
-        .price-new{font-size:7.2em;font-weight:900;line-height:1;
-                     background:linear-gradient(to bottom,#fff,#ccc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-        .per-unit{font-size:2.4em;color:var(--green);font-weight:900;margin:10px 0;}
-        .economia{background:var(--gold);color:#000;padding:12px 35px;border-radius:50px;font-size:1.7em;font-weight:900;
-                  box-shadow:0 8px 25px rgba(255,215,0,.6);}
-        .countdown-box{background:var(--red);color:#fff;padding:14px 35px;border-radius:50px;font-size:1.8em;animation:pulse 1.5s infinite;}
-        .btn{background:#25d366;color:#fff;padding:22px 40px;border-radius:50px;font-size:2.1em;font-weight:900;
-             text-decoration:none;display:block;margin:20px 40px;box-shadow:0 12px 35px rgba(37,211,102,.7);transition:all .3s;}
-        .btn:hover{background:#128C7E;transform:scale(1.06);}
+        .card-body{padding:40px 25px;}
+        .price-new{font-size:7rem;font-weight:900;background:linear-gradient(to bottom,#fff,#aaa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        .per-unit{font-size:2.4rem;color:var(--green);font-weight:800;}
+        .economia{background:var(--gold);color:#000;padding:14px 40px;border-radius:50px;font-size:1.8rem;font-weight:900;}
+        .countdown-box{background:var(--red);color:#fff;padding:16px 40px;border-radius:50px;font-size:1.8rem;font-weight:700;margin:20px 0;}
+        .btn{background:#25d366;color:#fff;padding:24px 40px;border-radius:50px;font-size:2.1rem;font-weight:900;text-decoration:none;display:block;margin:25px 40px;box-shadow:0 15px 40px rgba(37,211,102,0.5);transition:all .3s;}
+        .btn:hover{background:#128C7E;transform:scale(1.05);}
 
-        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin:60px 0;}
-        .stat-box{background:#1a1a1a;padding:40px;border-radius:25px;border:4px solid var(--gold);text-align:center;}
-        .stat-box h3{font-size:4.5em;color:var(--gold);margin:0;}
-        .formol-risk{background:var(--red);padding:50px;border-radius:30px;max-width:1100px;margin:60px auto;text-align:center;}
-        .badges-extra span{background:var(--green);color:#fff;padding:15px 40px;border-radius:50px;margin:15px;font-size:1.8em;font-weight:900;display:inline-block;}
+        /* SEÇÕES ABAIXO */
+        .section{padding:120px 0;}
+        .section h2{font-family:'Playfair Display',serif;font-size:3.8rem;text-align:center;margin-bottom:70px;color:var(--gold);}
+        .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;}
+        .benefit-card{background:#fff;color:#222;padding:45px;border-radius:25px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:0.4s;}
+        .benefit-card:hover{transform:translateY(-12px);}
+        .benefit-card i{font-size:3.8rem;color:var(--red);margin-bottom:25px;}
 
-        .section{padding:100px 0;}
-        .section h2{font-size:3.5em;text-align:center;margin-bottom:60px;color:var(--gold);}
-        .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
-        .benefit-card{background:#fff;color:#333;padding:35px;border-radius:25px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.3);transition:all .4s;}
-        .benefit-card:hover{transform:translateY(-10px);}
-        .benefit-card i{font-size:3.5em;color:var(--red);margin-bottom:20px;}
+        .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:40px;}
+        .video-wrapper{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);}
 
-        .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:35px;margin-top:50px;}
-        .video-wrapper{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5);}
-
-        .testimonials{background:#111;padding:100px 0;}
-        .carousel{display:flex;overflow-x:auto;gap:30px;padding:30px 0;scroll-snap-type:x mandatory;}
+        .testimonials{background:#111;padding:120px 0;}
+        .carousel{display:flex;overflow-x:auto;gap:35px;padding:40px 0;scroll-snap-type:x mandatory;}
         .carousel::-webkit-scrollbar{display:none;}
-        .testimonial-card{flex:0 0 400px;background:#fff;color:#333;padding:40px;border-radius:25px;box-shadow:0 20px 50px rgba(0,0,0,.4);scroll-snap-align:center;}
-        .testimonial-card p{font-size:1.3em;font-style:italic;line-height:1.7;margin-bottom:20px;}
-        .stars{color:var(--gold);font-size:2em;}
-        .author{font-weight:900;color:var(--red);}
+        .testimonial-card{flex:0 0 420px;background:#fff;color:#222;padding:45px;border-radius:25px;box-shadow:0 20px 50px rgba(0,0,0,0.4);}
+        .stars{color:var(--gold);font-size:2.2rem;}
 
-        .guarantee-section{background:var(--green);padding:100px 20px;text-align:center;}
-        .guarantee-card{background:#fff;color:#333;padding:50px;border-radius:30px;max-width:700px;margin:0 auto;box-shadow:0 20px 50px rgba(0,0,0,.4);}
-        .guarantee-badge{background:var(--gold);color:#000;padding:15px 40px;border-radius:50px;font-size:1.8em;font-weight:900;display:inline-block;margin-bottom:25px;}
+        .guarantee-section{background:var(--green);padding:120px 20px;text-align:center;}
+        .guarantee-card{background:#fff;color:#222;padding:60px;border-radius:30px;max-width:750px;margin:0 auto;box-shadow:0 25px 60px rgba(0,0,0,0.4);}
+        .guarantee-badge{background:var(--gold);color:#000;padding:18px 50px;border-radius:50px;font-size:2rem;font-weight:900;display:inline-block;margin-bottom:30px;}
 
-        .faqs{background:#fff;color:#333;padding:100px 20px;}
-        .faq-item{margin-bottom:25px;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2);}
-        .faq-question{background:var(--red);color:#fff;padding:25px;font-size:1.4em;font-weight:700;cursor:pointer;}
-        .faq-answer{padding:25px;display:none;background:#f9f9f9;}
+        .faqs{background:#fff;color:#222;padding:120px 20px;}
+        .faq-item{margin-bottom:30px;border-radius:20px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,0.15);}
+        .faq-question{background:#222;color:#fff;padding:28px;font-size:1.5rem;font-weight:600;cursor:pointer;}
+        .faq-answer{padding:30px;background:#f8f8f8;display:none;}
         .faq-answer.active{display:block;}
 
-        .whatsapp-float{position:fixed;bottom:25px;right:25px;background:#25d366;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:3.2em;box-shadow:0 12px 40px rgba(37,211,102,.8);z-index:999;animation:pulse 2s infinite;}
+        .whatsapp-float{position:fixed;bottom:30px;right:30px;background:#25d366;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:3.4rem;box-shadow:0 15px 40px rgba(37,211,102,0.6);z-index:999;}
 
-        @media(max-width:1200px){.offers-grid{grid-template-columns:repeat(2,1fr);}}
+        @media(max-width:1024px){.offers-grid{grid-template-columns:1fr 1fr;}}
         @media(max-width:768px){
+            .hero h1{font-size:3.8rem;}
+            .hero .highlight{font-size:3.2rem;}
             .offers-grid{grid-template-columns:1fr;}
-            .hero h1{font-size:5em;}.hero .destaque{font-size:3.2em;}
-            .price-new{font-size:6em;}.offer-card{height:auto;min-height:600px;}.offer-card.best{transform:scale(1.04);}
+            .offer-card{height:auto;min-height:650px;}
+            .offer-card.best{transform:scale(1.03);}
         }
     </style>
 </head>
 <body>
 
+    <!-- TOP BAR -->
     <div class="top-bar">
-        2 POR R$197 • TERMINA EM <span id="countdown-top">00d 00:00:00</span>
+        2 POR R$197 • PROMOÇÃO OFICIAL • TERMINA EM <span id="countdown-top">00d 00:00:00</span>
     </div>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>MEGA PROMOÇÃO<br>FIM DE ANO 2025</h1>
-            <div class="destaque">2 POR R$197</div>
-            <p style="font-size:2.5em;margin:30px 0;">R$98,50 cada • Últimas unidades!</p>
-            <h2 style="font-size:4.5em;color:#FFD700;margin:40px 0;">ZERO FORMOL • 100% VEGETAL</h2>
-            <p style="font-size:2.2em;color:#c41f2a;font-weight:900;">APROVADO PELA ANVISA • SEM RISCOS À SAÚDE</p>
+            <h1>Progressiva Vegetal Havana</h1>
+            <p class="subtitle">Liso Perfeito, Natural e Sem Danos</p>
+            <div class="highlight">2 POR R$197</div>
+            <p style="font-size:2.4rem;margin:30px 0;">R$ 98,50 cada • Últimas unidades da promoção</p>
+            <div class="anvisa-badge">APROVADO PELA ANVISA • 100% SEGURO</div>
+            <p style="font-size:1.4rem;margin-top:30px;opacity:0.9;">Zero formol • Fórmula vegetal premium • Resultado de salão em casa</p>
         </div>
     </section>
 
-    <!-- SEÇÃO DOS ROUBOS TURBINADOS -->
-    <section style="background:#000;padding:80px 20px;text-align:center;">
+    <!-- CONFIANÇA -->
+    <section class="trust-section">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-box"><h3>89%</h3><p style="font-size:1.8em;">Resultado na 1ª aplicação</p></div>
-                <div class="stat-box"><h3>95%</h3><p style="font-size:1.8em;">Mais brilho nos fios</p></div>
-                <div class="stat-box"><h3>97%</h3><p style="font-size:1.8em;">Comprariam de novo</p></div>
+                <div class="stat-box"><h3>89%</h3><p>Resultado visível na 1ª aplicação</p></div>
+                <div class="stat-box"><h3>95%</h3><p>Fios com muito mais brilho</p></div>
+                <div class="stat-box"><h3>97%</h3><p>Das clientes comprariam novamente</p></div>
             </div>
 
-            <div class="formol-risk">
-                <h3 style="font-size:3em;margin-bottom:30px;">O FORMOL PODE CAUSAR:</h3>
-                <p style="font-size:1.9em;line-height:2;">
-                    Queima no couro cabeludo<br>
-                    Irritação nos olhos e garganta<br>
-                    Queda de cabelo<br>
-                    Risco de câncer (Anvisa)<br><br>
-                    <strong style="color:#FFD700;font-size:2.2em;">NUNCA MAIS passe por isso!</strong>
-                </p>
+            <div class="safety-box">
+                <h3 style="font-size:2.5rem;">O formol pode causar:</h3>
+                <ul>
+                    <li>Queimação no couro cabeludo</li>
+                    <li>Irritação nos olhos e garganta</li>
+                    <li>Queda de cabelo</li>
+                    <li><strong>Risco de câncer (classificado pela Anvisa)</strong></li>
+                </ul>
+                <p style="margin-top:30px;font-size:1.8rem;"><strong>Nunca mais passe por isso.</strong></p>
             </div>
 
-            <div class="badges-extra">
-                <span>Pague só quando receber</span>
-                <span>Frete Grátis todo Brasil</span>
-                <span>Funciona em TODAS as químicas</span>
+            <div class="badges">
+                <span>Pague só na entrega</span>
+                <span>Frete Grátis Brasil</span>
+                <span>Funciona em todos os tipos de química</span>
             </div>
         </div>
     </section>
 
-    <!-- 3 CARDS -->
+    <!-- CARDS -->
     <div class="offers-wrapper">
         <div class="offers-grid">
             <div class="offer-card">
                 <div class="badge">TESTE BARATO</div>
                 <div class="card-body">
-                    <h3>1 PROGRESSIVA</h3>
+                    <h3 style="font-size:2.8rem;">1 PROGRESSIVA</h3>
                     <div class="price-old">De R$170</div>
                     <div class="price-new">R$150</div>
-                    <p style="font-size:1.5em;margin:15px 0;">Perfeito pra começar!</p>
+                    <p style="font-size:1.5em;margin:20px 0;">Perfeito pra começar</p>
                     <a href="https://wa.me/5519982159610?text=Quero%201%20Progressiva%20por%20R$150" class="btn">QUERO 1 POR R$150</a>
                 </div>
             </div>
 
             <div class="offer-card best">
-                <div class="badge">MELHOR OFERTA DO ANO</div>
+                <div class="badge">MELHOR OFERTA</div>
                 <div class="card-body">
-                    <h3>2 PROGRESSIVAS</h3>
+                    <h3 style="font-size:2.8rem;">2 PROGRESSIVAS</h3>
                     <div class="price-old">De R$340</div>
                     <div class="price-new">R$197</div>
                     <div class="per-unit">R$98,50 CADA!</div>
                     <div class="economia">ECONOMIZE R$143</div>
-                    <div style="background:#0d6e0d;padding:15px;border-radius:50px;font-size:1.6em;margin:20px;">Pague só quando receber + Frete Grátis</div>
+                    <div style="background:var(--green);padding:16px;border-radius:50px;font-size:1.6rem;margin:20px;">Pague na entrega + Frete Grátis</div>
                     <div class="countdown-box" id="countdown-main">ACABA EM 00d 00:00:00</div>
                     <a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20AGORA!!" class="btn">LEVAR 2 POR R$197</a>
                 </div>
             </div>
 
             <div class="offer-card">
-                <div class="badge" style="background:#2d3748;">PREÇO NORMAL</div>
+                <div class="badge" style="background:#333;">PREÇO NORMAL</div>
                 <div class="card-body">
-                    <h3>2 PROGRESSIVAS</h3>
+                    <h3 style="font-size:2.8rem;">2 PROGRESSIVAS</h3>
                     <div class="price-old">De R$340</div>
                     <div class="price-new">R$340</div>
-                    <p style="font-size:1.5em;margin:15px 0;">Valor cheio • Sem desconto</p>
+                    <p style="font-size:1.5em;margin:20px 0;">Valor cheio • Sem desconto</p>
                     <a href="https://wa.me/5519982159610?text=Quero%202%20Progressivas%20por%20R$340" class="btn">QUERO 2 POR R$340</a>
                 </div>
             </div>
@@ -206,7 +217,7 @@
         </div>
     </section>
 
-    <!-- AVALIAÇÕES / DEPOIMENTOS -->
+    <!-- AVALIAÇÕES -->
     <section class="testimonials">
         <div class="container">
             <h2>+35.000 Clientes Satisfeitas</h2>
@@ -227,7 +238,7 @@
             <h2>Garantia de 7 Dias</h2>
             <div class="guarantee-card">
                 <div class="guarantee-badge">100% de Volta</div>
-                <p style="font-size:1.5em;">Não gostou? Devolvemos seu dinheiro em até 7 dias. Risco zero!</p>
+                <p style="font-size:1.6rem;">Não gostou? Devolvemos seu dinheiro em até 7 dias. Risco zero!</p>
             </div>
         </div>
     </section>
@@ -244,7 +255,7 @@
         </div>
     </section>
 
-    <a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20NA%20MEGA%20PROMO!!" class="whatsapp-float">
+    <a href="https://wa.me/5519982159610?text=QUERO%20AS%202%20POR%20R$197%20NA%20PROMO!!" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 
